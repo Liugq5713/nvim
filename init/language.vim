@@ -7,7 +7,9 @@ let g:vim_markdown_fenced_languages = ['javascript', 'js=javascript', 'json=java
 let g:jsx_ext_required = 0
 
 " Highlight JSON files as javascript
-autocmd BufRead,BufNewFile *.json set filetype=javascript
+" autocmd BufRead,BufNewFile *.json set filetype=javascript
+
+" autocmd BufRead,BufNewFile *.tsx set filetype=typescript
 
 "-- FOLDING --
 let javascript_fold=1 "activate folding by JS syntax

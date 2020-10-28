@@ -1,4 +1,5 @@
 " Pad comment delimeters with spaces
+
 let NERDSpaceDelims=1
 set guioptions-=T               " Remove GUI toolbar
 set guioptions-=e               " Use text tab bar, not GUI
@@ -14,7 +15,8 @@ set autoindent
 set smarttab                    " Use shiftwidth to tab at line beginning
 set shiftwidth=2                " Width of autoindent
 set nowrap                      " No wrapping
-set number relativenumber       " Line numbers
+" set number relativenumber       " Line numbers
+set number
 set backspace=indent,eol,start " Let backspace work over anything.
 set wildignore+=tags               " Ignore tags when globbing.
 set wildignore+=tmp/**             " ...Also tmp files.
@@ -68,3 +70,6 @@ hi CursorColumn cterm=NONE ctermbg=238
 
 " automatically wrap lines >100 characters (use "gq" to autoformat)
 set tw=100
+
+" show bookmarks
+let NERDTreeShowBookmarks=1

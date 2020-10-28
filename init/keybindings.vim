@@ -17,6 +17,10 @@ vmap <s-tab> <gv
 " Git blame
 map <leader>g :Gblame<CR>
 
+" NERDTreeTabs 
+map <t-t> <plug>NERDTreeTabsToggle<CR>
+map <leader>e :NERDTreeFind<CR>
+nmap <leader>nt :NERDTreeFind<CR>
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
 map <D-/>       <plug>NERDCommenterToggle

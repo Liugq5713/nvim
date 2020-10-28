@@ -14,14 +14,15 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Colorschemes
 Plug 'joshdick/onedark.vim'
 Plug 'mhartington/oceanic-next'
-" Elixir
+" ElixirNetrw
 Plug 'elixir-editors/vim-elixir'
 " File Control / Formatting
 Plug 'ctrlpvim/ctrlp.vim'
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'godlygeek/tabular'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'preservim/nerdtree'
+" Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
@@ -55,7 +56,7 @@ Plug 'Shougo/neosnippet-snippets'
 " TypeScript
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'othree/yajs.vim'
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
 
 " Initialize plugin system
 call plug#end()
