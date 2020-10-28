@@ -11,6 +11,11 @@ let &packpath = &runtimepath
 "
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
+
+" True color
+Plug 'jacoborus/tender.vim'
+
 " Colorschemes
 Plug 'joshdick/onedark.vim'
 Plug 'mhartington/oceanic-next'

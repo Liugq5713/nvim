@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/liuguangqi/workspace/byteui'
+let g:netrw_dirhist_4='/Users/liuguangqi/workspace/byteui/components'
+let g:netrw_dirhist_3='/Users/liuguangqi/workspace/byteui/components/BackTop'
+let g:netrw_dirhist_2='/Users/liuguangqi/workspace/byteui/components'
+let g:netrw_dirhist_1='/Users/liuguangqi/workspace/byteui'

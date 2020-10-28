@@ -4,11 +4,20 @@
 let mapleader = ","
 " let maplocalleader = ";"
 
-" Move between screens
-nmap <C-h>      <C-w>h<CR>
-nmap <C-j>      <C-w>j<CR>
-nmap <C-k>      <C-w>k<CR>
-nmap <C-l> <C-w>l<CR>
+" Save & quit
+noremap <LEADER>w :w<CR>
+noremap <LEADER>W :wa<CR>
+noremap <LEADER>q :q<CR>
+
+" Redo
+noremap U :redo<CR>
+
+" noremap space i<space><esc>
+" U/E keys for 5 times u/e (faster navigation)
+noremap <silent> K 5k
+noremap <silent> J 5j
+noremap <C-h> ^
+noremap <C-l> $
 
 "indent/unindent visual mode selection with tab/shift+tab
 vmap <tab> >gv
@@ -18,9 +27,10 @@ vmap <s-tab> <gv
 map <leader>g :Gblame<CR>
 
 " NERDTreeTabs 
-map <t-t> <plug>NERDTreeTabsToggle<CR>
+map <C-e> :NERDTreeToggle<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
+
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
 map <D-/>       <plug>NERDCommenterToggle
@@ -49,6 +59,24 @@ nnoremap <C-t>     :tabnew<CR>
 inoremap <C-t>     <Esc>:tabnew<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
+
+
+" Split screen
+noremap s <nop>
+noremap Sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap Sj :set splitbelow<CR>:split<CR>
+noremap Sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap Sl :set splitright<CR>:vsplit<CR>
+noremap sk <C-w>k
+noremap sj <C-w>j
+noremap sh <C-w>h
+noremap sl <C-w>l
+noremap sc <C-w>c
+
+
+" Page scroll
+noremap <C-n> <C-d>
+noremap <C-m> <C-u>
 
 " Toggle Paste with F3
 set pastetoggle=<F3>
