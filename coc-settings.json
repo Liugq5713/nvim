@@ -6,14 +6,24 @@
     "Kiko",
     "Millis",
     "Qrcode",
+    "SSMLTAG",
+    "Shougo",
+    "Sider",
     "Trangle",
+    "Uids",
     "actix",
     "bindgen",
     "bytedance",
     "bytedesign",
+    "ctrlpvim",
     "devtools",
+    "litbot",
+    "mhartington",
     "renderable",
+    "ssml",
     "struct",
+    "ttml",
+    "ttss",
     "vuetify",
     "wasm",
     "weixin"
@@ -70,7 +80,7 @@
     "K": ["toggleSelection", "normal:k"],
     "gl": "expandRecursive",
     "gh": "collapseRecursive",
-    "o": "expandOrCollapse",
+    "o": ["expanded?", "collapse", "expand"],
     "<cr>": "open",
     "e": "open",
     "E": "openInVsplit",
@@ -114,7 +124,7 @@
     "<<": "gitStage",
     ">>": "gitUnstage"
   },
-  "explorer.position": "floating",
+  "explorer.position":"floating",
   "explorer.quitOnOpen": false,
   "explorer.sources": [
     {
@@ -211,5 +221,3 @@
   "vetur.experimental.templateInterpolationService": true,
   "vetur.validation.template": false
 }
-n
- 
