@@ -143,7 +143,7 @@ nmap ? :CocFix<CR>
 xmap <leader><leader> :CocAction<CR>
 nmap <leader><leader> :CocAction<CR>
 nmap <leader>o :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
-nmap tt :CocCommand explorer<CR>
+nmap <leader>e :CocCommand explorer<CR>
 " Use K to show documentation in preview window.
 " nnoremap <silent> K :call <SID>show_documentation()<CR>
 
