@@ -38,8 +38,8 @@ noremap U :redo<CR>
 " U/E keys for 5 times u/e (faster navigation)
 noremap <silent> K 5k
 noremap <silent> J 5j
-noremap <C-h> ^
-noremap <C-l> $
+noremap B ^
+noremap E $
 
 "indent/unindent visual mode selection with tab/shift+tab
 vmap <tab> >gv
@@ -211,153 +211,7 @@ Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'
 " Initialize plugin system
 call plug#end()
 
-
-" ===
-" === coc
-" ===
-" fix the most annoying bug that coc has
-silent! au BufEnter,BufRead,BufNewFile * silent! unmap if
-let g:coc_global_extensions = ['coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-lists', 'coc-gitignore', 'coc-vimlsp', 'coc-lists', 'coc-git', 'coc-explorer', 'coc-bookmark','coc-sourcekit', 'coc-highlight', 'coc-snippets', 'coc-prettier', 'coc-eslint', 'coc-webpack', 'coc-spell-checker', 'coc-rust-analyzer', 'coc-vetur', 'coc-texlab', 'coc-flutter']
-" use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-" Show signature help on placeholder jump
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-" coc-todolist
-noremap ta :CocCommand todolist.create<CR>
-noremap td :CocCommand todolist.upload<CR>
-noremap tD :CocCommand todolist.download<CR>
-noremap tc :CocCommand todolist.clearNotice<CR>
-noremap tc :CocCommand todolist.clearNotice<CR>
-noremap tl :CocList --normal todolist<CR>
-" coc-translator
-nmap ts <Plug>(coc-translator-p)
-" coc-markmap
-command! Markmap CocCommand markmap.create
-" coc-highlight
-autocmd CursorMoved * silent call CocActionAsync('highlight')
-" coc-snippets
-let g:coc_snippet_next = '<tab>'
-
-
-
-
-
-" Appearance
-" -----------
-
-" Pad comment delimeters with spaces
-
-set guioptions-=T               " Remove GUI toolbar
-set guioptions-=e               " Use text tab bar, not GUI
-set guioptions-=rL              " Remove scrollbars
-set visualbell                  " Suppress audio/visual error bell
-set notimeout                   " No command timeout
-set showcmd                     " Show typed command prefixes while waiting for operator
-set guifont=FiraCode\ Regular\ 9 " Set default font
-
-set expandtab                   " Use soft tabs
-set tabstop=2                   " Tab settings
-set autoindent
-set smarttab                    " Use shiftwidth to tab at line beginning
-set shiftwidth=2                " Width of autoindent
-set nowrap                      " No wrapping
-" set number relativenumber       " Line numbers
-set number
-set backspace=indent,eol,start " Let backspace work over anything.
-set wildignore+=tags               " Ignore tags when globbing.
-set wildignore+=tmp/**             " ...Also tmp files.
-set wildignore+=public/uploads/**  " ...Also uploads.
-set wildignore+=public/images/**   " ...Also images.
-set wildignore+=vendor/**          " ...Also vendor.
-
-set list                        " Show whitespace (Tabs appear as ^I)
-set listchars=trail:~
-
-set showmatch                   " Show matching brackets
-set hidden                      " Allow hidden, unsaved buffers
-set splitright                  " Add new windows towards the right
-set splitbelow                  " ... and bottom
-set wildmode=list:longest       " Bash-like tab completion
-set scrolloff=3                 " Scroll when the cursor is 3 lines from edge
-set cursorline                  " Highlight current line
-
-" More detailed status line
-set statusline=[%n]\ %f\ %m\ %y
-" set statusline+=%{fugitive#statusline()} " Show git details"
-set statusline+=%w              " [Preview]
-set statusline+=%=              " Left/right separator
-set statusline+=%c,             " Cursor column
-set statusline+=%l/%L           " Cursor line/total lines
-set statusline+=\ %P            " Percent through file
-
-set laststatus=2                " Always show statusline
-
-set incsearch                   " Incremental search
-set history=1024                " History size
-set smartcase                   " Smart case-sensitivity when searching (overrides ignorecase)
-
-set autoread                    " No prompt for file changes outside Vim
-
-set swapfile                    " Keep swapfiles
-set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
-set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
-
-set hls                         " search with highlights by default
-
-" Write all writeable buffers when changing buffers or losing focus.
-set autowriteall                " Save when doing various buffer-switching things.
-autocmd BufLeave,FocusLost * silent! wall  " Save anytime we leave a buffer or MacVim loses focus.
-
-" cursor column
-set cursorcolumn
-set cursorline
-hi CursorLine cterm=NONE ctermbg=238
-hi CursorColumn cterm=NONE ctermbg=238
-
-" automatically wrap lines >100 characters (use "gq" to autoformat)
-set tw=100
-
-
-" ===
-" === True color
-" ===
-if (has("termguicolors"))
- set termguicolors
-endif
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme tender
-
-" UI
-hi CursorColumn guibg=#263238
-hi CursorLine guibg=#263238
-hi Folded guifg=#ffc107 guibg=none
-hi Normal guibg=#000000
-hi SignColumn guibg=#000000
-hi Visual guibg=#607d8b
-" Default syntax
-hi Comment guifg=#666666 gui=italic
-hi Conditional guifg=#c9d05c gui=italic
-hi Repeat guifg=#c9d05c gui=italic
-hi Exception guifg=#9fa8da
-hi Keyword guifg=#c0ca33
-hi Operator guifg=#ab47bc
-hi Special guifg=#ce93d8
-hi String guifg=#aed581
-hi Title guifg=#d1c4e9
-" Typescript
-hi typescriptAssign guifg=#ab47bc
+pescriptAssign guifg=#ab47bc
 hi typescriptAsyncFuncKeyword guifg=#c0ca33 gui=italic
 hi typescriptBinaryOp guifg=#26a69a
 hi typescriptDotNotation guifg=#81c784
