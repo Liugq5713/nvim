@@ -211,7 +211,26 @@ Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'
 " Initialize plugin system
 call plug#end()
 
-pescriptAssign guifg=#ab47bc
+
+" UI
+hi CursorColumn guibg=#263238
+hi CursorLine guibg=#263238
+hi Folded guifg=#ffc107 guibg=none
+hi Normal guibg=#000000
+hi SignColumn guibg=#000000
+hi Visual guibg=#607d8b
+" Default syntax
+hi Comment guifg=#666666 gui=italic
+hi Conditional guifg=#c9d05c gui=italic
+hi Repeat guifg=#c9d05c gui=italic
+hi Exception guifg=#9fa8da
+hi Keyword guifg=#c0ca33
+hi Operator guifg=#ab47bc
+hi Special guifg=#ce93d8
+hi String guifg=#aed581
+hi Title guifg=#d1c4e9
+" Typescript
+hi typescriptAssign guifg=#ab47bc
 hi typescriptAsyncFuncKeyword guifg=#c0ca33 gui=italic
 hi typescriptBinaryOp guifg=#26a69a
 hi typescriptDotNotation guifg=#81c784
@@ -250,22 +269,3 @@ hi CocRustChainingHint guifg=#00695c gui=italic
 nmap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-
-" Colors
-" -----------
-
-" Set neovim colors
-if has('nvim') || has('termguicolors')
-  set termguicolors
-endif
-
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" set background=dark
-syntax enable
-
-
-" Highlight the maxlength
-set colorcolumn=100
-
-let g:airline_theme = 'oceanicnext'
