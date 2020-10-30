@@ -31,6 +31,12 @@ let mapleader = ","
 noremap <LEADER>w :w<CR>
 noremap <LEADER>q :q<CR>
 
+tnoremap <Esc> <C-\><C-n>
+
+" To simulate i_CTRL-R in terminal-mode
+tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
+
+noremap te :set splitbelow<CR>:split term://zsh<CR>
 " Redo
 noremap U :redo<CR>
 
@@ -38,8 +44,8 @@ noremap U :redo<CR>
 " U/E keys for 5 times u/e (faster navigation)
 noremap <silent> K 5k
 noremap <silent> J 5j
-noremap B ^
-noremap E $
+noremap H ^
+noremap L $
 
 "indent/unindent visual mode selection with tab/shift+tab
 vmap <tab> >gv
@@ -112,7 +118,7 @@ nmap <C-f>  :Rg<CR>
 " Edit init.vim
 noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
 " Reload conf
-noremap <LEADER>re :source ~/.config/nvim/init.vim<CR>
+noremap <LEADER>cc :source ~/.config/nvim/init.vim<CR>
 
 
 " Example configuration
@@ -134,6 +140,7 @@ nmap <silent> g[ <Plug>(coc-diagnostic-prev)
 nmap <silent> g] <Plug>(coc-diagnostic-next)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn  <Plug>(coc-rename)
@@ -262,7 +269,6 @@ hi GitGutterChange guifg=#fff176
 hi GitGutterDelete guifg=#e57373
 hi CocCodeLens guifg=#455a64
 " Syntax
-hi typescriptLogicSymbols guifg=#26a69a
 hi typescriptFuncKeyword guifg=#ce93d8
 " Css
 hi cssNoise guifg=#9fa8da
