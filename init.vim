@@ -212,6 +212,15 @@ Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'
 call plug#end()
 
 
+" ===
+" === True color
+" ===
+if (has("termguicolors"))
+ set termguicolors
+endif
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+colorscheme tender
+
 " UI
 hi CursorColumn guibg=#263238
 hi CursorLine guibg=#263238
