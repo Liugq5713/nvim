@@ -3,13 +3,30 @@
 " by Thomas Lackemann
 
 set fileformat=unix
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set list
+set listchars=tab:»\ ,trail:▞
+set number
+set relativenumber
+syntax on
+set hlsearch
+set cursorline
+set cursorcolumn
+set hidden
+set nowrapscan
+set mouse=a
+set shortmess+=c
+set signcolumn=yes
+set updatetime=300
+set clipboard+=unnamedplus
+set so=10
+set cmdheight=2
 
 syntax on
 filetype plugin indent on    " required
 filetype plugin on
-
-runtime! init/**.vim
-
 
 " ===
 " === Auto load for first time uses
