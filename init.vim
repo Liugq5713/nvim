@@ -9,7 +9,6 @@ set shiftwidth=4
 set list
 set listchars=tab:»\ ,trail:▞
 set number
-set relativenumber
 syntax on
 set hlsearch
 set cursorline
@@ -24,7 +23,6 @@ set clipboard+=unnamedplus
 set so=10
 set cmdheight=2
 
-syntax on
 filetype plugin indent on    " required
 filetype plugin on
 
