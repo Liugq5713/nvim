@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/liuguangqi/workspace/h_cloud/monorepo/packages/nlp_web/src/views/Tool/Audio/SSMLEditor/TagTypes'
 let g:netrw_dirhist_9='/Users/liuguangqi/workspace/h_cloud/monorepo/packages/nlp_web'
 let g:netrw_dirhist_8='/Users/liuguangqi/workspace/h_cloud/monorepo/packages/nlp_web/src'
 let g:netrw_dirhist_7='/Users/liuguangqi/workspace/h_cloud/monorepo/packages/nlp_web'

@@ -17,6 +17,7 @@
     "bindgen",
     "bytedance",
     "bytedesign",
+    "ctrlp",
     "ctrlpvim",
     "devtools",
     "echodoc",
@@ -27,6 +28,7 @@
     "struct",
     "ttml",
     "ttss",
+    "vsplit",
     "vuetify",
     "wasm",
     "weixin"
@@ -85,8 +87,10 @@
     "gh": "collapseRecursive",
     "o": ["expanded?", "collapse", "expand"],
     "<cr>": "open",
+    "s": "open:split",
+    "S": "open:split:plain",
+    "E": "open:vsplit",
     "e": "open",
-    "E": "openInVsplit",
     "t": "openInTab",
     "<bs>": "gotoParent",
 

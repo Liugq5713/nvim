@@ -22,10 +22,14 @@ set updatetime=300
 set clipboard+=unnamedplus
 set so=10
 set cmdheight=2
+set history=200
 
 filetype plugin indent on    " required
 filetype plugin on
 
+set wildignore+=*/node_modules/*
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules)$'
 " ===
 " === Auto load for first time uses
 " ===
@@ -148,6 +152,8 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : ""
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : ""
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
 inoremap <expr> <c-space> coc#refresh()
 " Useful commands
 nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
@@ -165,9 +171,9 @@ nmap ? :CocFix<CR>
 xmap <leader><leader> :CocAction<CR>
 nmap <leader><leader> :CocAction<CR>
 nmap <leader>o :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
-nmap <leader>e :CocCommand explorer<CR>
 " Use K to show documentation in preview window.
 " nnoremap <silent> K :call <SID>show_documentation()<CR>
+
 
 call plug#begin()
  
@@ -190,6 +196,7 @@ Plug 'mhartington/oceanic-next'
 " ElixirNetrw
 Plug 'elixir-editors/vim-elixir'
 " File Control / Formatting
+Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -234,6 +241,25 @@ Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'
 call plug#end()
 
 
+" Plugins {
+    " NerdTree {
+        if isdirectory(expand("~/.config/nvim/plugged/nerdtree"))
+            map <C-e> <plug>NERDTreeTabsToggle<CR>
+            map <leader>e :NERDTreeFind<CR>
+            nmap <leader>nt :NERDTreeFind<CR>
+
+            let NERDTreeShowBookmarks=1
+            let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
+            let NERDTreeChDirMode=0
+            let NERDTreeQuitOnOpen=1
+            let NERDTreeMouseMode=2
+            let NERDTreeShowHidden=1
+            let NERDTreeKeepTreeInNewTab=1
+            let g:nerdtree_tabs_open_on_gui_startup=0
+        endif
+    " }
+" }
+	"
 " ===
 " === True color
 " ===
