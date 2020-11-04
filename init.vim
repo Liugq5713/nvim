@@ -66,6 +66,11 @@ noremap <silent> J 5j
 noremap H ^
 noremap L $
 
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : ""
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : ""
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+
 "indent/unindent visual mode selection with tab/shift+tab
 vmap <tab> >gv
 vmap <s-tab> <gv
@@ -89,7 +94,7 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 " let g:alchemist_tag_stack_map = '<C-m>'
 
 " Stop Go from hijacking tab navigation
-" let g:go_def_mapping_enabled = 0
+"let g:go_def_mapping_enabled = 0
 
 " tab navigation like firefox
 nnoremap <C-S-tab> :tabprevious<CR>
@@ -111,7 +116,11 @@ noremap sj <C-w>j
 noremap sh <C-w>h
 noremap sl <C-w>l
 noremap sc <C-w>c
-
+" Resize splits with arrow keys
+noremap s<up> :res +5<CR>
+noremap s<down> :res -5<CR>
+noremap s<left> :vertical resize-5<CR>
+noremap s<right> :vertical resize+5<CR>
 
 " Page scroll
 noremap <C-n> <C-d>
@@ -131,29 +140,18 @@ nmap <F3> i<C-R>=strftime("%FT%T%z")<CR><Esc>
 imap <F3> <C-R>=strftime("%FT%T%z")<CR>
 
 " Use FZF like a big ol' project search (ctrl+f)
-nmap <C-f>  :Rg<CR>
-
+noremap <silent> <C-p> :Leaderf file<CR>
+noremap <silent> <C-f> :Rg<CR>
+noremap <silent> <C-h> :History<CR>
 
 " Edit init.vim
 noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
-" Reload conf
-noremap <LEADER>cc :source ~/.config/nvim/init.vim<CR>
-
-
-" Example configuration
-nmap <Leader>bj <Plug>(coc-bookmark-next)
-nmap <Leader>bk <Plug>(coc-bookmark-prev)
-nmap <Leader>b <Plug>(coc-bookmark-annotate)
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : ""
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : ""
-cnoremap <C-j> <Down>
-cnoremap <C-k> <Up>
 inoremap <expr> <c-space> coc#refresh()
 " Useful commands
 nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
@@ -198,6 +196,7 @@ Plug 'elixir-editors/vim-elixir'
 " File Control / Formatting
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'godlygeek/tabular'
@@ -251,7 +250,7 @@ call plug#end()
             let NERDTreeShowBookmarks=1
             let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
             let NERDTreeChDirMode=0
-            let NERDTreeQuitOnOpen=1
+            let NERDTreeQuitOnOpen=0
             let NERDTreeMouseMode=2
             let NERDTreeShowHidden=1
             let NERDTreeKeepTreeInNewTab=1
