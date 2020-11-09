@@ -1,7 +1,3 @@
-" 
-" Vim Config
-" by Thomas Lackemann
-
 set fileformat=unix
 set smartindent
 set tabstop=4
@@ -23,6 +19,8 @@ set clipboard+=unnamedplus
 set so=10
 set cmdheight=2
 set history=200
+
+set nobackup
 
 filetype plugin indent on    " required
 filetype plugin on
@@ -96,15 +94,6 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 " Stop Go from hijacking tab navigation
 "let g:go_def_mapping_enabled = 0
 
-" tab navigation like firefox
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-t>     <Esc>:tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
-
-
 " Split screen
 noremap s <nop>
 noremap Sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
@@ -121,10 +110,6 @@ noremap s<up> :res +5<CR>
 noremap s<down> :res -5<CR>
 noremap s<left> :vertical resize-5<CR>
 noremap s<right> :vertical resize+5<CR>
-
-" Page scroll
-noremap <C-n> <C-d>
-noremap <C-m> <C-u>
 
 " Copy/paste with gVim
 vmap <C-c> "+yi
@@ -169,6 +154,8 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr> <c-space> coc#refresh()
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " Useful commands
 nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
 nmap <silent> g[ <Plug>(coc-diagnostic-prev)
@@ -191,9 +178,6 @@ nmap <leader>o :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 
 call plug#begin()
  
-set runtimepath^=~/.vim
-let &packpath = &runtimepath
-
 " # Plugins
 " Make sure you use single quotes
 "
