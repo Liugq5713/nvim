@@ -14,7 +14,7 @@ set nowrapscan
 set mouse=a
 set shortmess+=c
 set signcolumn=yes
-set updatetime=300
+set updatetime=1000
 set clipboard+=unnamedplus
 set so=10
 set cmdheight=2
@@ -41,19 +41,35 @@ endif
 " Keybindings
 " -----------
 
-let mapleader = ","
-" let maplocalleader = ";"
+let mapleader = " " 
+
+noremap <LEADER>t :set splitbelow<CR>:split term://zsh<CR>i
 
 " Save & quit
 noremap <LEADER>w :w<CR>
 noremap <LEADER>q :q<CR>
+
+
+" Git blame
+map <leader>g :Gblame<CR>
+
+" Comment/uncomment lines
+map <leader>/   <plug>NERDCommenterToggle
+
+" Auto-indent whole file
+nmap <leader>= gg=G``
+
+
+" Edit init.vim
+noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
+
+" let maplocalleader = ";"
 
 tnoremap <Esc> <C-\><C-n>
 
 " To simulate i_CTRL-R in terminal-mode
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
-noremap te :set splitbelow<CR>:split term://zsh<CR>
 " Redo
 noremap U :redo<CR>
 
@@ -72,18 +88,8 @@ cnoremap <C-k> <Up>
 "indent/unindent visual mode selection with tab/shift+tab
 vmap <tab> >gv
 vmap <s-tab> <gv
-
-" Git blame
-map <leader>g :Gblame<CR>
-
-" Comment/uncomment lines
-map <leader>/   <plug>NERDCommenterToggle
 map <D-/>       <plug>NERDCommenterToggle
 imap <D-/> <Esc><plug>NERDCommenterToggle i
-
-" Auto-indent whole file
-nmap <leader>= gg=G``
-
 " Press Space to turn off highlighting and clear any message already
 " displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
@@ -95,7 +101,6 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 "let g:go_def_mapping_enabled = 0
 
 " Split screen
-noremap s <nop>
 noremap Sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
 noremap Sj :set splitbelow<CR>:split<CR>
 noremap Sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
@@ -127,11 +132,7 @@ imap <F3> <C-R>=strftime("%FT%T%z")<CR>
 " Use FZF like a big ol' project search (ctrl+f)
 noremap <silent> <C-p> :Leaderf file<CR>
 noremap <silent> <C-f> :Rg<CR>
-noremap <silent> <C-h> :History<CR>
-
-" Edit init.vim
-noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
-
+noremap <silent> <LEADER>h :History<CR>
 " ===
 " === coc
 " ===
@@ -184,7 +185,8 @@ call plug#begin()
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
-
+Plug 'tpope/vim-surround'
+Plug 'gcmt/wildfire.vim'
 " True color
 Plug 'jacoborus/tender.vim'
 
