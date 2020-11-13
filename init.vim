@@ -1,3 +1,6 @@
+" neovim config
+" by liuguangqi
+
 set fileformat=unix
 set smartindent
 set tabstop=4
@@ -65,7 +68,7 @@ noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
 
 " let maplocalleader = ";"
 
-tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>:q<CR>
 
 " To simulate i_CTRL-R in terminal-mode
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
@@ -73,6 +76,8 @@ tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 " Redo
 noremap U :redo<CR>
 
+nmap <C-p> :Files<CR>
+nmap <C-e> :Buffers<CR>
 " noremap space i<space><esc>
 " U/E keys for 5 times u/e (faster navigation)
 noremap <silent> K 5k
@@ -223,6 +228,8 @@ Plug 'bpietravalle/vim-bolt'
 " Markdown
 Plug 'gabrielelana/vim-markdown'
 Plug 'jszakmeister/markdown2ctags'
+Plug 'vim-voom/VOoM'
+
 " Rust
 Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
@@ -245,7 +252,6 @@ call plug#end()
 " Plugins {
     " NerdTree {
         if isdirectory(expand("~/.config/nvim/plugged/nerdtree"))
-            map <C-e> <plug>NERDTreeTabsToggle<CR>
             map <leader>e :NERDTreeFind<CR>
             nmap <leader>nt :NERDTreeFind<CR>
 
