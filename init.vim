@@ -230,7 +230,6 @@ Plug 'bpietravalle/vim-bolt'
 " Markdown
 Plug 'gabrielelana/vim-markdown'
 Plug 'jszakmeister/markdown2ctags'
-Plug 'vim-voom/VOoM'
 
 " Rust
 Plug 'racer-rust/vim-racer'
@@ -250,6 +249,22 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 " Initialize plugin system
 call plug#end()
 
+" Add support for markdown files in tagbar.
+let g:tagbar_type_markdown = {
+    \ 'ctagstype': 'markdown',
+    \ 'ctagsbin' : '~/.config/nvim/plugged/markdown2ctags/markdown2ctags.py',
+    \ 'ctagsargs' : '-f - --sort=yes --sro=»',
+    \ 'kinds' : [
+	    \ 'h:headings',
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '»',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+\ }
 
 " Plugins {
     " NerdTree {
