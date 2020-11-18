@@ -193,10 +193,12 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'gcmt/wildfire.vim'
 " True color
-Plug 'jacoborus/tender.vim'
+"Plug 'jacoborus/tender.vim'
+Plug 'tomasr/molokai'
 
 " Colorschemes
 Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'mhartington/oceanic-next'
 " ElixirNetrw
 Plug 'elixir-editors/vim-elixir'
@@ -274,7 +276,11 @@ if (has("termguicolors"))
  set termguicolors
 endif
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme tender
+colorscheme onedark
+let g:airline_theme='onedark'
+"colorscheme molokai
+"let g:rehash256 = 1
+"let g:molokai_original = 1
 
 " UI
 hi CursorColumn guibg=#263238
