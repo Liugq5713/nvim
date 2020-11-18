@@ -253,7 +253,7 @@ call plug#end()
 let g:tagbar_type_markdown = {
     \ 'ctagstype': 'markdown',
     \ 'ctagsbin' : '~/.config/nvim/plugged/markdown2ctags/markdown2ctags.py',
-    \ 'ctagsargs' : '-f - --sort=yes --sro=»',
+    \ 'ctagsargs' : '-f - --sro=»',
     \ 'kinds' : [
 	    \ 'h:headings',
         \ 's:sections',
