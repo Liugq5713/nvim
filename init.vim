@@ -40,6 +40,8 @@ silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
 autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+autocmd BufWritePre,BufRead *.md :TagbarOpen<cr>
+
 
 " Keybindings
 " -----------
