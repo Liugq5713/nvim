@@ -1,6 +1,11 @@
 " neovim config
 " by liuguangqi
 
+
+" ----------------------------------- "
+" 基本设置
+" ----------------------------------- "
+
 set fileformat=unix
 set smartindent
 set tabstop=4
@@ -202,6 +207,8 @@ Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mhartington/oceanic-next'
+" wiki
+Plug 'vimwiki/vimwiki'
 " ElixirNetrw
 Plug 'elixir-editors/vim-elixir'
 " File Control / Formatting
