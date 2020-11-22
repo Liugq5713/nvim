@@ -33,24 +33,34 @@ filetype plugin on
 set wildignore+=*/node_modules/*
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules)$'
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}] 
-au BufRead,BufNewFile *.md set filetype=vimwiki
 " ===
 "
 " === Auto load for first time uses
 " ===
+
+" ----------------------------------- "
+" Auto Load config
+" ----------------------------------- "
+
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
 silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
 			\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
+" ----------------------------------- "
+" 自动命令
+" ----------------------------------- "
+
 autocmd BufWritePre,BufRead *.md :TagbarOpen<cr>
 
 
+
+" ----------------------------------- "
 " Keybindings
-" -----------
+" ----------------------------------- "
+
 
 let mapleader = " " 
 
@@ -190,6 +200,11 @@ nmap <leader>o :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 " nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 
+
+" ----------------------------------- "
+" 自动命令
+" ----------------------------------- "
+
 call plug#begin()
  
 " # Plugins
@@ -208,8 +223,6 @@ Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mhartington/oceanic-next'
-" wiki
-Plug 'vimwiki/vimwiki'
 " ElixirNetrw
 Plug 'elixir-editors/vim-elixir'
 " File Control / Formatting
@@ -276,6 +289,11 @@ let g:tagbar_type_markdown = {
     \ 'sort': 0,
 \ }
 
+
+" ----------------------------------- "
+" 自动命令
+" ----------------------------------- "
+
 " Plugins {
     " NerdTree {
         if isdirectory(expand("~/.config/nvim/plugged/nerdtree"))
@@ -314,7 +332,6 @@ hi Folded guifg=#ffc107 guibg=none
 hi Normal guibg=#000000
 hi SignColumn guibg=#000000
 hi Visual guibg=#607d8b
-" Default syntax
 hi Comment guifg=#666666 gui=italic
 hi Conditional guifg=#c9d05c gui=italic
 hi Repeat guifg=#c9d05c gui=italic
@@ -324,6 +341,7 @@ hi Operator guifg=#ab47bc
 hi Special guifg=#ce93d8
 hi String guifg=#aed581
 hi Title guifg=#d1c4e9
+
 " Typescript
 hi typescriptAssign guifg=#ab47bc
 hi typescriptAsyncFuncKeyword guifg=#c0ca33 gui=italic
