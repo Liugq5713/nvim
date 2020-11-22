@@ -1,6 +1,3 @@
-" neovim config
-" by liuguangqi
-
 
 " ----------------------------------- "
 " 基本设置
@@ -36,7 +33,11 @@ filetype plugin on
 set wildignore+=*/node_modules/*
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules)$'
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}] 
+au BufRead,BufNewFile *.md set filetype=vimwiki
 " ===
+"
 " === Auto load for first time uses
 " ===
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
