@@ -238,6 +238,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 " Git
+Plug 'kdheepak/lazygit.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " Haxe
