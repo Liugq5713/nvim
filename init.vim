@@ -64,10 +64,6 @@ autocmd BufWritePre,BufRead *.md :TagbarOpen<cr>
 
 let mapleader = " " 
 
-nnoremap ; :
-nnoremap : ;
-xnoremap : ;
-xnoremap ; :
 " setup mapping to call :LazyGit
 nnoremap <silent> <leader>lg :LazyGit<CR>
 
