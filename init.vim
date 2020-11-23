@@ -64,6 +64,13 @@ autocmd BufWritePre,BufRead *.md :TagbarOpen<cr>
 
 let mapleader = " " 
 
+nnoremap ; :
+nnoremap : ;
+xnoremap : ;
+xnoremap ; :
+" setup mapping to call :LazyGit
+nnoremap <silent> <leader>lg :LazyGit<CR>
+
 noremap <LEADER>t :set splitbelow<CR>:split term://zsh<CR>i
 
 " Save & quit
@@ -238,7 +245,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 " Git
-Plug 'kdheepak/lazygit.nvim'
+Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3' }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " Haxe
