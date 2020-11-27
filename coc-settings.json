@@ -103,6 +103,7 @@
   },
   "npm.binPath": "yarn",
   "prettier.eslintIntegration": true,
+  "prettier.disableLanguages":["html"],
   "python.autoComplete.addBrackets": true,
   "python.formatting.provider": "yapf",
   "python.jediEnabled": false,
