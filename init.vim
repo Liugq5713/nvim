@@ -324,7 +324,11 @@ if (has("termguicolors"))
 endif
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme onedark
+let g:onedark_termcolors=256
 let g:airline_theme='onedark'
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
 "colorscheme molokai
 "let g:rehash256 = 1
 "let g:molokai_original = 1
