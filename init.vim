@@ -9,6 +9,7 @@ set fileencoding=utf-8
 set smartindent
 set tabstop=4
 set shiftwidth=4
+set scrolloff=5
 set list
 set listchars=tab:»\ ,trail:▞
 set number
