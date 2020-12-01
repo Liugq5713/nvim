@@ -20,6 +20,7 @@
     "bindgen",
     "bytedance",
     "bytedesign",
+    "camelcase",
     "compoptimize",
     "ctrlp",
     "ctrlpvim",
