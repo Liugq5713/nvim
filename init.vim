@@ -105,6 +105,9 @@ nmap <C-e> :Buffers<CR>
 " U/E keys for 5 times u/e (faster navigation)
 noremap <silent> K 5k
 noremap <silent> J 5j
+noremap <silent> H 0
+noremap <silent> L $
+
 
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : ""
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : ""
