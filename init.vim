@@ -100,8 +100,12 @@ tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 " Redo
 noremap U :redo<CR>
 
+" Use FZF like a big ol' project search (ctrl+f)
 nmap <C-p> :Files<CR>
-nmap <C-e> :Buffers<CR>
+nmap <c-e> :buffers<cr>
+noremap <silent> <c-f> :rg<cr>
+noremap <silent> <LEADER>h :History<CR>
+	
 " noremap space i<space><esc>
 " U/E keys for 5 times u/e (faster navigation)
 noremap <silent> K 5k
@@ -159,10 +163,6 @@ nnoremap gf :vertical wincmd f<CR>
 nmap <F3> i<C-R>=strftime("%FT%T%z")<CR><Esc>
 imap <F3> <C-R>=strftime("%FT%T%z")<CR>
 
-" Use FZF like a big ol' project search (ctrl+f)
-noremap <silent> <C-p> :Leaderf file<CR>
-noremap <silent> <C-f> :Rg<CR>
-noremap <silent> <LEADER>h :History<CR>
 " ===
 " === coc
 " ===
@@ -193,7 +193,6 @@ nmap <silent> g[ <Plug>(coc-diagnostic-prev)
 nmap <silent> g] <Plug>(coc-diagnostic-next)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn  <Plug>(coc-rename)
@@ -340,3 +339,6 @@ let g:lightline = {
 nmap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+
+hi Normal guibg=NONE ctermbg=NONE
