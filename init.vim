@@ -241,7 +241,7 @@ Plug 'godlygeek/tabular'
 " Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'vim-syntastic/syntastic'
 " Git
 Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3' }
