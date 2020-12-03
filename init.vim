@@ -9,7 +9,6 @@ set fileencoding=utf-8
 set smartindent
 set tabstop=4
 set shiftwidth=4
-set scrolloff=5
 set list
 set listchars=tab:»\ ,trail:▞
 set number
@@ -228,13 +227,13 @@ Plug 'tomasr/molokai'
 " Colorschemes
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'mhartington/oceanic-next'
+"Plug 'mhartington/oceanic-next'
 " ElixirNetrw
 Plug 'elixir-editors/vim-elixir'
 " File Control / Formatting
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+"Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'godlygeek/tabular'
@@ -262,11 +261,11 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'jszakmeister/markdown2ctags'
 
 " Rust
-Plug 'racer-rust/vim-racer'
-Plug 'rust-lang/rust.vim'
-Plug 'cespare/vim-toml'
+"Plug 'racer-rust/vim-racer'
+"Plug 'rust-lang/rust.vim'
+"Plug 'cespare/vim-toml'
 " Shaders/GLSL
-Plug 'tikhomirov/vim-glsl'
+"Plug 'tikhomirov/vim-glsl'
 " Snippets
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
