@@ -70,6 +70,10 @@ let mapleader = " "
 nnoremap <silent> <leader>lg :LazyGit<CR>
 
 noremap <LEADER>t :set splitbelow<CR>:split term://zsh<CR>i
+tnoremap <Esc> <C-\><C-n>
+
+" To simulate i_CTRL-R in terminal-mode
+tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
 " Save & quit
 noremap <LEADER>w :w<CR>
@@ -90,12 +94,6 @@ nmap <leader>= gg=G``
 noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
 
 " let maplocalleader = ";"
-
-tnoremap <Esc> <C-\><C-n>:q<CR>
-
-" To simulate i_CTRL-R in terminal-mode
-tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
-
 " Redo
 noremap U :redo<CR>
 
@@ -109,7 +107,7 @@ noremap <silent> <LEADER>h :History<CR>
 " U/E keys for 5 times u/e (faster navigation)
 noremap <silent> K 5k
 noremap <silent> J 5j
-noremap <silent> H 0
+noremap <silent> H ^
 noremap <silent> L $
 
 
