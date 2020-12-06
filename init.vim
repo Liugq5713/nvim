@@ -99,7 +99,7 @@ noremap U :redo<CR>
 
 " Use FZF like a big ol' project search (ctrl+f)
 nmap <C-p> :Files<CR>
-nmap <c-e> :buffers<cr>
+nmap <c-e> :Buffers<cr>
 noremap <silent> <c-f> :rg<cr>
 noremap <silent> <LEADER>h :History<CR>
 	
