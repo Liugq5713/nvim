@@ -89,6 +89,7 @@ map <leader>/   <plug>NERDCommenterToggle
 " Auto-indent whole file
 nmap <leader>= gg=G``
 
+nmap <leader>o o<Esc> 
 
 " Edit init.vim
 noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
@@ -198,7 +199,6 @@ nmap <leader>f :call CocAction('format')<CR>
 nmap ? :CocFix<CR>
 xmap <leader><leader> :CocAction<CR>
 nmap <leader><leader> :CocAction<CR>
-nmap <leader>o :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 " Use K to show documentation in preview window.
 " nnoremap <silent> K :call <SID>show_documentation()<CR>
 
