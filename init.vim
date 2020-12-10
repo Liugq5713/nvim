@@ -132,16 +132,22 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 " Stop Go from hijacking tab navigation
 "let g:go_def_mapping_enabled = 0
 
-" Split screen
+" split screen
 noremap Sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
 noremap Sj :set splitbelow<CR>:split<CR>
 noremap Sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 noremap Sl :set splitright<CR>:vsplit<CR>
+"move cursor
 noremap sk <C-w>k
 noremap sj <C-w>j
 noremap sh <C-w>h
 noremap sl <C-w>l
 noremap sc <C-w>c
+" move screen
+noremap <C-s>k <C-w>K
+noremap <C-s>j <C-w>J
+noremap <C-s>h <C-w>H
+noremap <C-s>l <C-w>L
 " Resize splits with arrow keys
 noremap s<up> :res +5<CR>
 noremap s<down> :res -5<CR>
