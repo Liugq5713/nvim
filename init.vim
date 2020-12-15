@@ -236,6 +236,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'elixir-editors/vim-elixir'
 " File Control / Formatting
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
