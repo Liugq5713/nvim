@@ -17,6 +17,8 @@
     "TEXTSTATUS",
     "Trangle",
     "Uids",
+    "VOICEERROR",
+    "VOICENORMAL",
     "VOICESTATUS",
     "actix",
     "ailab",
