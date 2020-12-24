@@ -100,7 +100,7 @@ noremap U :redo<CR>
 
 " Use FZF like a big ol' project search (ctrl+f)
 nmap <C-p> :Files<CR>
-nmap <c-e> :Buffers<cr>
+nmap <C-e> :Buffers<cr>
 noremap <silent> <c-f> :rg<cr>
 noremap <silent> <LEADER>h :History<CR>
 	
@@ -132,7 +132,12 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 " Stop Go from hijacking tab navigation
 "let g:go_def_mapping_enabled = 0
 
-" split screen
+
+
+" ----------------------------------- "
+" screen
+" ----------------------------------- "
+
 noremap Sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
 noremap Sj :set splitbelow<CR>:split<CR>
 noremap Sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
@@ -302,7 +307,7 @@ let g:tagbar_type_markdown = {
 
 
 " ----------------------------------- "
-" 自动命令
+" NerdTree动命令 
 " ----------------------------------- "
 
 " Plugins {
