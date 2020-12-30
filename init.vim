@@ -99,11 +99,14 @@ noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
 noremap U :redo<CR>
 
 " Use FZF like a big ol' project search (ctrl+f)
-nmap <C-p> :Files<CR>
-nmap <C-e> :Buffers<cr>
-noremap <silent> <c-f> :rg<cr>
-noremap <silent> <LEADER>h :History<CR>
-	
+nmap <C-p> :GFiles<CR>
+noremap <silent> <C-l> :Lines<CR>
+noremap <silent> <C-w> :Buffers<CR>
+noremap <silent> <C-e> :Rg<CR>
+noremap <silent> <C-h> :History<CR>
+
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
 " noremap space i<space><esc>
 " U/E keys for 5 times u/e (faster navigation)
 noremap <silent> K 5k
