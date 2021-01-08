@@ -55,7 +55,7 @@ endif
 " 自动命令
 " ----------------------------------- "
 
-autocmd BufWritePre,BufRead *.md :TagbarOpen<cr>
+"autocmd BufWritePre,BufRead *.md :TagbarOpen<cr>
 
 
 
