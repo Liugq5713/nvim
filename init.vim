@@ -243,6 +243,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'tomasr/molokai'
 
 " Colorschemes
+Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 "Plug 'mhartington/oceanic-next'
@@ -344,7 +345,8 @@ if (has("termguicolors"))
  set termguicolors
 endif
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme onedark
+colorscheme gruvbox
+set background=dark 
 let g:onedark_termcolors=256
 let g:airline_theme='onedark'
 let g:lightline = {
