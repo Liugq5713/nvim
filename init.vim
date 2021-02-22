@@ -293,7 +293,6 @@ Plug 'Shougo/neosnippet-snippets'
 " TypeScript
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'othree/yajs.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " Initialize plugin system
 call plug#end()
