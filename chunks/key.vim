@@ -49,6 +49,20 @@ noremap <C-k> 5k
 noremap <C-h> ^
 noremap <C-l> $
 
+" Split screen
+noremap s <nop>
+noremap Sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap Sj :set splitbelow<CR>:split<CR>
+noremap Sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap Sl :set splitright<CR>:vsplit<CR>
+noremap sk <C-w>k
+noremap sj <C-w>j
+noremap sh <C-w>h
+noremap sl <C-w>l
+noremap sK <C-w>K
+noremap sJ <C-w>J
+noremap sH <C-w>H
+noremap sL <C-w>L
 
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : ""
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : ""

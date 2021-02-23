@@ -1,10 +1,7 @@
-call plug#begin()
-
 " ===
 " Plugins
 " ===
 call plug#begin('~/.config/nvim/plugged')
-
 " ===== Tools =====
 " Status Line
 Plug 'itchyny/lightline.vim'
@@ -17,7 +14,6 @@ Plug 'mbbill/undotree'
 Plug 'jacoborus/tender.vim'
 " Select word
 Plug 'gcmt/wildfire.vim'
-
 " ===== Syntax =====
 " Kotlin
 Plug 'udalov/kotlin-vim'
@@ -38,9 +34,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'groenewege/vim-less'
 " Rust
 Plug 'rust-lang/rust.vim'
-
 " ===== Misc =====
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-
 call plug#end()
