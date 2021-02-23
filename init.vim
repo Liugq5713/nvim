@@ -1,33 +1,4 @@
 
-" ----------------------------------- "
-" 基本设置
-" ----------------------------------- "
-
-set fileformat=unix
-set encoding=utf-8
-set fileencoding=utf-8
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set list
-set listchars=tab:»\ ,trail:▞
-set number
-syntax on
-set hlsearch
-set cursorline
-set cursorcolumn
-set hidden
-set nowrapscan
-set mouse=a
-set shortmess+=c
-set signcolumn=yes
-set updatetime=1000
-set clipboard+=unnamedplus
-set so=10
-set cmdheight=2
-set history=200
-
-set nobackup
 
 filetype plugin indent on    " required
 filetype plugin on
@@ -57,77 +28,6 @@ endif
 
 "autocmd BufWritePre,BufRead *.md :TagbarOpen<cr>
 
-
-
-" ----------------------------------- "
-" Keybindings
-" ----------------------------------- "
-
-
-let mapleader = " " 
-
-" setup mapping to call :LazyGit
-nnoremap <silent> <leader>lg :LazyGit<CR>
-
-noremap <LEADER>t :set splitbelow<CR>:split term://zsh<CR>i
-tnoremap <Esc> <C-\><C-n>
-
-" To simulate i_CTRL-R in terminal-mode
-tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
-
-" Save & quit
-noremap <LEADER>w :w<CR>
-noremap <LEADER>q :q<CR>
-
-
-" Git blame
-map <leader>g :Gblame<CR>
-
-" Comment/uncomment lines
-map <leader>/   <plug>NERDCommenterToggle
-
-" Auto-indent whole file
-nmap <leader>= gg=G``
-
-nmap <leader>o o<Esc> 
-
-" Edit init.vim
-noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
-
-" let maplocalleader = ";"
-" Redo
-noremap U :redo<CR>
-
-" Use FZF like a big ol' project search (ctrl+f)
-nmap <C-p> :GFiles<CR>
-noremap <silent> <C-l> :Lines<CR>
-noremap <silent> <C-w> :Buffers<CR>
-noremap <silent> <C-e> :Rg<CR>
-noremap <silent> <C-h> :History<CR>
-
-command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
-
-" noremap space i<space><esc>
-" U/E keys for 5 times u/e (faster navigation)
-noremap <silent> K 5k
-noremap <silent> J 5j
-noremap <silent> H ^
-noremap <silent> L $
-
-
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : ""
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : ""
-cnoremap <C-j> <Down>
-cnoremap <C-k> <Up>
-
-"indent/unindent visual mode selection with tab/shift+tab
-vmap <tab> >gv
-vmap <s-tab> <gv
-map <D-/>       <plug>NERDCommenterToggle
-imap <D-/> <Esc><plug>NERDCommenterToggle i
-" Press Space to turn off highlighting and clear any message already
-" displayed.
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 
 " Stop Elixir from hijacking tab navigation
 " let g:alchemist_tag_stack_map = '<C-m>'
