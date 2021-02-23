@@ -18,10 +18,6 @@ tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 noremap <LEADER>w :w<CR>
 noremap <LEADER>q :q<CR>
 
-
-" Git blame
-map <leader>g :Gblame<CR>
-
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
 
