@@ -14,6 +14,10 @@ Plug 'mbbill/undotree'
 Plug 'jacoborus/tender.vim'
 " Select word
 Plug 'gcmt/wildfire.vim'
+
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 " ===== Syntax =====
 " Kotlin
 Plug 'udalov/kotlin-vim'

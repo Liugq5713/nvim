@@ -125,7 +125,7 @@
 
     "yp": "copyFilepath",
     "yn": "copyFilename",
-    "yy": "copyFile",
+    "y": "copyFile",
     "dd": "cutFile",
     "p": "pasteFile",
     "df": "delete",
