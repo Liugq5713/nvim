@@ -1,3 +1,5 @@
+call plug#begin()
+
 " ===
 " Plugins
 " ===

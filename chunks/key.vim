@@ -1,105 +1,70 @@
-" ===
-" Key bindings
-" ===
-" Basic
-let mapleader=" "
-noremap ; :
+" ----------------------------------- "
+" Keybindings
+" ----------------------------------- "
+
+
+let mapleader = " " 
+
+" setup mapping to call :LazyGit
+nnoremap <silent> <leader>lg :LazyGit<CR>
+
+noremap <LEADER>t :set splitbelow<CR>:split term://zsh<CR>i
+tnoremap <Esc> <C-\><C-n>
+
+" To simulate i_CTRL-R in terminal-mode
+tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
 " Save & quit
 noremap <LEADER>w :w<CR>
-noremap <LEADER>W :wa<CR>
 noremap <LEADER>q :q<CR>
-noremap <LEADER>Q :q!<CR>
+
+
+" Git blame
+map <leader>g :Gblame<CR>
+
+" Comment/uncomment lines
+map <leader>/   <plug>NERDCommenterToggle
+
+" Auto-indent whole file
+nmap <leader>= gg=G``
+
+nmap <leader>o o<Esc> 
 
 " Edit init.vim
 noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
 
-" Indentation
-nnoremap , <<
-nnoremap . >>
-vnoremap , <
-vnoremap . >
-
+" let maplocalleader = ";"
 " Redo
 noremap U :redo<CR>
 
-" Search
-noremap <LEADER><CR> :nohlsearch<CR>
+" Use FZF like a big ol' project search (ctrl+f)
+nmap <C-p> :GFiles<CR>
+noremap <silent> <C-l> :Lines<CR>
+noremap <silent> <C-w> :Buffers<CR>
+noremap <silent> <C-e> :Rg<CR>
+noremap <silent> <C-h> :History<CR>
 
-" Reload conf
-noremap <LEADER>re :source ~/.config/nvim/init.vim<CR>
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
-" Movement
+" noremap space i<space><esc>
+" U/E keys for 5 times u/e (faster navigation)
 noremap <C-j> 5j
 noremap <C-k> 5k
 noremap <C-h> ^
 noremap <C-l> $
-noremap W 5w
-noremap B 5b
 
-" Move screen without move cursor
-nnoremap <C-d> 5<C-y>
-nnoremap <C-f> 5<C-e>
 
-" Page scroll
-noremap <C-n> <C-d>
-noremap <C-m> <C-u>
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : ""
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : ""
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
 
-" Split screen
-noremap s <nop>
-noremap Sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
-noremap Sj :set splitbelow<CR>:split<CR>
-noremap Sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-noremap Sl :set splitright<CR>:vsplit<CR>
-noremap sk <C-w>k
-noremap sj <C-w>j
-noremap sh <C-w>h
-noremap sl <C-w>l
-noremap sK <C-w>K
-noremap sJ <C-w>J
-noremap sH <C-w>H
-noremap sL <C-w>L
+"indent/unindent visual mode selection with tab/shift+tab
+vmap <tab> >gv
+vmap <s-tab> <gv
+map <D-/>       <plug>NERDCommenterToggle
+imap <D-/> <Esc><plug>NERDCommenterToggle i
+" Press Space to turn off highlighting and clear any message already
+" displayed.
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 
-" Resize splits with arrow keys
-noremap <up> :res +5<CR>
-noremap <down> :res -5<CR>
-noremap <left> :vertical resize-5<CR>
-noremap <right> :vertical resize+5<CR>
-
-" History position
-noremap <C-e> <C-o>
-noremap <C-r> <C-i>
-
-" Change case
-noremap ` ~
-
-" Move to end in insert mode
-inoremap <C-o> <end>
-inoremap <C-u> <home>
-
-" Command mode cursor
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
-cnoremap <C-b> <Left>
-cnoremap <C-f> <Right>
-cnoremap <M-b> <S-Left>
-cnoremap <M-w> <S-Right>
-
-" Terminal
-tnoremap <ESC> <C-\><C-n>
-tnoremap <C-f> <C-\><C-n>
-
-" Duplicate visual block
-vnoremap D yP
-nnoremap D yyP
-
-" Exit insert & select & visual mode
-inoremap <C-f> <esc>
-vnoremap <C-f> <esc>
-
-" Tabs
-nnoremap <leader>t :tabedit<CR>
-nnoremap <C-u> gT
-nnoremap <C-o> gt

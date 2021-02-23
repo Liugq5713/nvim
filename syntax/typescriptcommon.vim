@@ -547,7 +547,7 @@ syntax keyword typescriptMappedIn in
   \ nextgroup=@typescriptType
   \ contained skipwhite skipnl skipempty
 
-syntax keyword typescriptAliasKeyword type
+syntax match  typescriptAliasKeyword /\(import\s*\)\@<!\zstype/
   \ nextgroup=typescriptAliasDeclaration
   \ skipwhite skipnl skipempty
 
