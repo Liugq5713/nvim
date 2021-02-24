@@ -12,6 +12,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mbbill/undotree'
 " True color
 Plug 'jacoborus/tender.vim'
+" Colorschemes
+Plug 'morhetz/gruvbox'
+
 " Select word
 Plug 'gcmt/wildfire.vim'
 
@@ -41,4 +44,7 @@ Plug 'rust-lang/rust.vim'
 " ===== Misc =====
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 call plug#end()
+
+colorscheme gruvbox
