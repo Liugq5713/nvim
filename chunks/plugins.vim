@@ -6,6 +6,9 @@ call plug#begin('~/.config/nvim/plugged')
 " Status Line
 Plug 'itchyny/lightline.vim'
 Plug 'josa42/vim-lightline-coc'
+" 快速选中文本，或者用来替换
+Plug 'tpope/vim-surround'
+Plug 'gcmt/wildfire.vim'
 " Auto Complete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Tototree
