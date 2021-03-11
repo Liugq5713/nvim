@@ -1,8 +1,8 @@
 " ===
 " === Wildfire
 " ===
-nmap <C-w> <Plug>(wildfire-fuel)
-xmap <C-w> <Plug>(wildfire-fuel)
+nmap <CR> <Plug>(wildfire-fuel)
+xmap <CR> <Plug>(wildfire-fuel)
 
 let g:wildfire_objects = {
   \ "*" : [

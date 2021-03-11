@@ -16,6 +16,6 @@ source $VIMUSERRUNTIME/chunks/key.vim
 source $VIMUSERRUNTIME/chunks/plugins.vim
 source $VIMUSERRUNTIME/chunks/lightline.vim
 source $VIMUSERRUNTIME/chunks/coc.vim
-source $VIMUSERRUNTIME/chunks/wildfire.vim
 source $VIMUSERRUNTIME/chunks/undotree.vim
 source $VIMUSERRUNTIME/chunks/color.vim
+source $VIMUSERRUNTIME/chunks/wildfire.vim
