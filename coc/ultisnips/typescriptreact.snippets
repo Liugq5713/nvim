@@ -50,3 +50,11 @@ const ${1}:FC<Props> =()=>{
 
 export default ${1}
 endsnippet
+
+
+snippet export-component " 导出组件" b
+
+export type { Props as ${1}Props } from './${1}';
+export { default as ${1}} from './${1}';
+
+endsnippet
