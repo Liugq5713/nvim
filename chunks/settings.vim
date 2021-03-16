@@ -24,6 +24,10 @@ set updatetime=1000
 set clipboard+=unnamedplus
 set so=10
 set cmdheight=2
-set history=200
+set history=500
 
 set nobackup
+
+" Set to auto read when a file is changed from the outside
+set autoread
+au FocusGained,BufEnter * checktime

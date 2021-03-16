@@ -9,6 +9,9 @@ Plug 'josa42/vim-lightline-coc'
 " 快速选中文本，或者用来替换
 Plug 'tpope/vim-surround'
 Plug 'gcmt/wildfire.vim'
+
+" 快速注释
+Plug 'preservim/nerdcommenter'
 " Auto Complete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Tototree
