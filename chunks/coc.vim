@@ -81,8 +81,6 @@ nmap <silent> gi                <Plug>(coc-implementation)
 nmap <silent> gr                <Plug>(coc-references)
 " Quick edit
 nmap          <leader>rn        <Plug>(coc-rename)
-xmap          <leader>f         <Plug>(coc-format-selected)
-nmap          <leader>f         :call CocAction('format')<CR>
 " CodeAction
 nmap          ?                 :CocFix<CR>
 nmap          <leader><leader>  :CocAction<CR>
