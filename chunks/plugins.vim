@@ -6,6 +6,8 @@ call plug#begin('~/.config/nvim/plugged')
 " Status Line
 Plug 'itchyny/lightline.vim'
 Plug 'josa42/vim-lightline-coc'
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " 快速选中文本，或者用来替换
 Plug 'tpope/vim-surround'
 Plug 'gcmt/wildfire.vim'
