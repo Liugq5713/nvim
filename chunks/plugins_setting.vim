@@ -18,6 +18,8 @@ let g:wildfire_objects = {
   \ "html,xml" : ["at", "it"],
 \ }
 
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 " === 
 " === prettier

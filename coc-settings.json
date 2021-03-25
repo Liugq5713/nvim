@@ -15,7 +15,7 @@
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextPrefix": " ❯❯❯ ",
   "diagnostic.warningSign": "",
-  "eslint.autoFixOnSave": true,
+  "eslint.autoFixOnSave": false,
   "eslint.packageManager": "pnpm",
   "explorer.file.autoReveal": false,
   "explorer.file.column.indent.indentLine": true,
