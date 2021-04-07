@@ -279,6 +279,7 @@
     "wasm",
     "weapp",
     "wechat",
-    "weixin"
+    "weixin",
+    "zoomable"
   ]
 }
