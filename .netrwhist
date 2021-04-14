@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/liuguangqi/workspace/h_cloud/monorepo/apps/litbot/nlp_web/src'
 let g:netrw_dirhist_2='/Users/liuguangqi/bin/to'
 let g:netrw_dirhist_1='/Users/liuguangqi/.config/nvim/coc'
