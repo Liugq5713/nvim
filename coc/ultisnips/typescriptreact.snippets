@@ -27,7 +27,7 @@
 snippet fc-callback "函数组件 useCallback" b
     const ${1}= useCallback(() => {
       try {
-	      ${2}
+       ${2}
       } catch (e) {
         Message.error(e.message);
       }
@@ -58,3 +58,12 @@ export type { Props as ${1}Props } from './${1}';
 export { default as ${1}} from './${1}';
 
 endsnippet
+
+# arco components snippet
+
+snippet arco-table-render "arco table render" b
+    render:(_,row:any)=>{
+        return <div>{row.${1}}</div>
+	}
+endsnippet
+
