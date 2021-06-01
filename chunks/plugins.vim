@@ -19,6 +19,9 @@ Plug 'gcmt/wildfire.vim'
 " 快速注释
 Plug 'preservim/nerdcommenter'
 
+" 全局搜索
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Colorschemes
 " Plug 'morhetz/gruvbox'
