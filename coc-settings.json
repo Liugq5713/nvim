@@ -32,12 +32,12 @@
     "<tab>": "actionMenu",
 
     "h": "collapse",
-    "l": ["expandable?", "expand", "open"],
+    "l": ["wait", "expandable?", "expand", "open"],
     "J": ["toggleSelection", "normal:j"],
     "K": ["toggleSelection", "normal:k"],
     "gl": "expandRecursive",
     "gh": "collapseRecursive",
-    "o": ["expandable?", "expand", "open"],
+    "o": ["wait", "expanded?", "collapse", "expand"],
     "<cr>": "open",
     "e": "open",
     "E": "open:vsplit",
@@ -71,8 +71,8 @@
     "gf": "gotoSource:file",
     "gb": "gotoSource:buffer",
 
-    "[[": "sourcePrev",
-    "]]": "sourceNext",
+    "[[": ["wait", "sourcePrev"],
+    "]]": ["wait", "sourceNext"],
 
     "[d": "diagnosticPrev",
     "]d": "diagnosticNext",
