@@ -34,11 +34,12 @@ noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
 noremap U :redo<CR>
 
 " Use FZF like a big ol' project search (ctrl+f)
-nmap <C-p> :GFiles<CR>
+nmap <C-p> :GFiles?<CR>
 noremap <silent> <C-l> :Lines<CR>
 noremap <silent> <C-w> :Buffers<CR>
 noremap <silent> <C-e> :Rg<CR>
 noremap <silent> <C-h> :History<CR>
+
 
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
