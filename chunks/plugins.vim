@@ -23,6 +23,9 @@ Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" git
+Plug 'tpope/vim-fugitive'
+
 " Colorschemes
 " Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
