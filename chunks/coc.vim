@@ -33,10 +33,6 @@ let g:coc_global_extensions = [
   \ 'coc-styled-components',
   \ ]
 
-" command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
-" vmap <leader>p  <Plug>(coc-format-selected)
-" nmap <leader>p  <Plug>(coc-format-selected)
-
 " Intellisense
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
