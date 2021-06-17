@@ -23,6 +23,8 @@ Plug 'junegunn/fzf.vim'
 " git
 Plug 'tpope/vim-fugitive'
 
+" tag 希望生成代码文件，但是目前还不知道怎么做
+" Plug 'vim-scripts/taglist.vim'
 " Colorschemes
 " Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
