@@ -33,8 +33,8 @@ noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
 " Redo
 noremap U :redo<CR>
 
+nmap <leader>p :let @+ = expand("%")<CR>
 " Use FZF like a big ol' project search (ctrl+f)
-nmap <C-p> :GFiles?<CR>
 noremap <silent> <C-l> :Lines<CR>
 noremap <silent> <C-w> :Buffers<CR>
 noremap <silent> <C-e> :Rg<CR>
