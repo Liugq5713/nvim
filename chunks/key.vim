@@ -46,8 +46,8 @@ command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : 
 
 " noremap space i<space><esc>
 " U/E keys for 5 times u/e (faster navigation)
-noremap <C-j> 5j
-noremap <C-k> 5k
+noremap <C-j> 8j
+noremap <C-k> 8k
 noremap <C-h> ^
 noremap <C-l> $
 
