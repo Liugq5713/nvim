@@ -38,7 +38,7 @@ nmap <leader>p :let @+ = expand("%")<CR>
 noremap <silent> <C-g> :GFiles?<CR>
 noremap <silent> <C-p> :Files<CR>
 noremap <silent> <C-l> :Lines<CR>
-noremap <silent> <C-w> :Buffers<CR>
+"noremap <silent> <C-b> :Buffers<CR>
 noremap <silent> <C-e> :Rg<CR>
 noremap <silent> <C-h> :History<CR>
 
