@@ -35,12 +35,12 @@ noremap U :redo<CR>
 
 nmap <leader>p :let @+ = expand("%")<CR>
 " Use FZF like a big ol' project search (ctrl+f)
-noremap <silent> <C-p> :GFiles?<CR>
+noremap <silent> <C-g> :GFiles?<CR>
+noremap <silent> <C-p> :Files<CR>
 noremap <silent> <C-l> :Lines<CR>
 noremap <silent> <C-w> :Buffers<CR>
 noremap <silent> <C-e> :Rg<CR>
 noremap <silent> <C-h> :History<CR>
-
 
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
