@@ -35,15 +35,12 @@ snippet fc-callback "函数组件 useCallback" b
 endsnippet
 
 snippet fc "创建一个函数" b
-import type {FC} from 'react'
-
 type Props ={
 
 }
 
-const ${1}:FC<Props> =()=>{
+const ${1} =({}:Props)=>{
 	return <>
-
 	hello
 	</>
 }
@@ -68,6 +65,6 @@ snippet arco-table-render "arco table render" b
 endsnippet
 
 snippet lg "console" b
-	console.log("this is god tip : ",${1})
+	console.log("${1}:  ",${1})
 endsnippet
 
