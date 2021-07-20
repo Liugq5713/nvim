@@ -14,17 +14,11 @@ tnoremap <Esc> <C-\><C-n>
 " To simulate i_CTRL-R in terminal-mode
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
-" Save & quit
-noremap <LEADER>w :w<CR>
-noremap <LEADER>q :q<CR>
-
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
 
 " Auto-indent whole file
 nmap <leader>= gg=G``
-
-nmap <leader>o o<Esc> 
 
 " Edit init.vim
 noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
@@ -66,11 +60,6 @@ cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 
 "indent/unindent visual mode selection with tab/shift+tab
-vmap <tab> >gv
-vmap <s-tab> <gv
-map <D-/>       <plug>NERDCommenterToggle
-imap <D-/> <Esc><plug>NERDCommenterToggle i
-" Press Space to turn off highlighting and clear any message already
 " displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 
