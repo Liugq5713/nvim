@@ -20,9 +20,6 @@ map <leader>/   <plug>NERDCommenterToggle
 " Auto-indent whole file
 nmap <leader>= gg=G``
 
-" Edit init.vim
-noremap <LEADER>ec :e ~/.config/nvim/init.vim<CR>
-
 " let maplocalleader = ";"
 " Redo
 noremap U :redo<CR>
@@ -37,13 +34,6 @@ noremap <silent> <C-e> :Rg<CR>
 noremap <silent> <C-h> :History<CR>
 
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
-
-" noremap space i<space><esc>
-" U/E keys for 5 times u/e (faster navigation)
-noremap <C-j> 8j
-noremap <C-k> 8k
-noremap <C-h> ^
-noremap <C-l> $
 
 " Split screen
 noremap s <nop>
