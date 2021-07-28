@@ -13,6 +13,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'gcmt/wildfire.vim'
 
+" 使用浏览器打开链接
+Plug 'tyru/open-browser.vim'
 " 快速注释
 Plug 'preservim/nerdcommenter'
 
