@@ -37,5 +37,5 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-colorscheme github
-"colorscheme ghdark
+colorscheme gruvbox
+set background=dark
