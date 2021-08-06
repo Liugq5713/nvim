@@ -29,3 +29,4 @@ if executable("rg")
 
     nnoremap <C-p>a :Rg
 endif
+

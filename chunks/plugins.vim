@@ -29,10 +29,13 @@ Plug 'tpope/vim-fugitive'
 " Plug 'vim-scripts/taglist.vim'
 " Colorschemes
 " Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
+"Plug 'wojciechkepka/vim-github-dark'
+"Plug 'joshdick/onedark.vim'
 
+Plug 'morhetz/gruvbox'
 
 
 call plug#end()
 
-colorscheme onedark
+colorscheme github
+"colorscheme ghdark
