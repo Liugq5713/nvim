@@ -14,9 +14,10 @@ tnoremap <Esc> <C-\><C-n>
 " To simulate i_CTRL-R in terminal-mode
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
-	let g:netrw_nogx = 1 " disable netrw's gx mapping.
-	nmap gx <Plug>(openbrowser-smart-search)
-	vmap gx <Plug>(openbrowser-smart-search)
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
 
@@ -38,11 +39,6 @@ noremap <silent> <C-h> :History<CR>
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " Split screen
-noremap s <nop>
-noremap Sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
-noremap Sj :set splitbelow<CR>:split<CR>
-noremap Sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-noremap Sl :set splitright<CR>:vsplit<CR>
 noremap <C-w>m <C-W>_<C-W><Bar>
 noremap <C-w>M <C-W>=
 
