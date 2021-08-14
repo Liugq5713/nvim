@@ -171,11 +171,6 @@
   "suggest.triggerAfterInsertEnter": false,
   "suggest.triggerCompletionWait": 100,
   "typescript.referencesCodeLens.enable": false,
-  "vetur.format.defaultFormatter.js": "none",
-  "vetur.format.defaultFormatter.ts": "prettier",
-  "vetur.format.defaultFormatter.html": "prettier",
-  "vetur.experimental.templateInterpolationService": true,
-  "vetur.validation.template": false,
   "workspace.progressTarget": "statusline",
   "cSpell.userWords": [
     "BOARDSTATUS",
