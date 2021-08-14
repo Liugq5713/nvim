@@ -25,13 +25,15 @@ Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Icons for different file types
+Plug 'ryanoasis/vim-devicons'
+
 " git
 Plug 'tpope/vim-fugitive'
 
 " tag 希望生成代码文件，但是目前还不知道怎么做
 " Plug 'vim-scripts/taglist.vim'
 " Colorschemes
-" Plug 'morhetz/gruvbox'
 "Plug 'wojciechkepka/vim-github-dark'
 "Plug 'joshdick/onedark.vim'
 

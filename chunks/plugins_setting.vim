@@ -23,10 +23,10 @@ let g:wildfire_objects = {
 "=========================================
 "自定义导航键，默认是 <C-h> <C-j> 等，想用 <C-w> h,j,k,l
 let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <C-w>h :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-w>j :TmuxNavigateDown<cr>
-nnoremap <silent> <C-w>k :TmuxNavigateUp<cr>
-nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
+nnoremap <silent> <C-w><C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-w><C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-w><C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-w><C-l> :TmuxNavigateRight<cr>
 "跳转到上一个分割窗口
 nnoremap <silent> <C-w>\ :TmuxNavigatePrevious<cr>
 "当从 vim 跳到 tmux 时，自动保存所有 buffer，1：保存当前buffer，2：所有buffer
