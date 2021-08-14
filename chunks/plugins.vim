@@ -7,6 +7,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "允许使用一致的快捷键在vim和tmux分割的窗格之间无缝导航
 Plug 'christoomey/vim-tmux-navigator'
+
 " ===== Tools =====
 " Status Line
 Plug 'itchyny/lightline.vim'
