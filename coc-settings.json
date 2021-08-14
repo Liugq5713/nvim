@@ -112,39 +112,6 @@
   "git.topRemovedSign.text": "▔",
   "git.virtualTextPrefix": " ❯❯❯ ",
   "html.format.enable": true,
-  "importSorter.generalConfiguration.sortOnBeforeSave": false,
-  "importSorter.importStringConfiguration.tabSize": 2,
-  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
-  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 80,
-  "importSorter.sortConfiguration.customOrderingRules.rules": [
-    {
-      "type": "importMember",
-      "regex": "^[rR]eact$",
-      "orderLevel": 1
-    },
-    {
-      "regex": "^react",
-      "orderLevel": 20
-    },
-    {
-      "regex": "^app/",
-      "orderLevel": 25
-    },
-    {
-      "regex": "^@/",
-      "orderLevel": 30
-    },
-    {
-      "regex": "^[.]",
-      "orderLevel": 40
-    },
-    {
-      "type": "importMember",
-      "regex": "^$",
-      "orderLevel": 100,
-      "disableSort": true
-    }
-  ],
   "javascript.referencesCodeLens.enable": true,
   "javascript.showUnused": true,
   "javascript.suggest.names": true,

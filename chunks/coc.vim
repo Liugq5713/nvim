@@ -29,7 +29,6 @@ let g:coc_global_extensions = [
   \ 'coc-flutter',
   \ 'coc-cssmodules',
   \ 'coc-pairs',
-  \ 'https://github.com/VanceLongwill/import-sorter',
   \ 'coc-styled-components',
   \ ]
 
