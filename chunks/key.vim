@@ -1,8 +1,6 @@
 " ----------------------------------- "
 " Keybindings
 " ----------------------------------- "
-
-
 let mapleader = " " 
 
 " setup mapping to call :LazyGit
@@ -25,8 +23,6 @@ map <leader>/   <plug>NERDCommenterToggle
 nmap <leader>= gg=G``
 
 " let maplocalleader = ";"
-" Redo
-noremap U :redo<CR>
 
 nmap <leader>p :let @+ = expand("%")<CR>
 " Use FZF like a big ol' project search (ctrl+f)
@@ -50,4 +46,3 @@ cnoremap <C-k> <Up>
 "indent/unindent visual mode selection with tab/shift+tab
 " displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
-
