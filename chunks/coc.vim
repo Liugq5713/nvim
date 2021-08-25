@@ -16,6 +16,7 @@ let g:coc_global_extensions = [
   \ 'coc-vimlsp',
   \ 'coc-lists',
   \ 'coc-git',
+  \ 'coc-yank',
   \ 'coc-explorer',
   \ 'coc-sourcekit',
   \ 'coc-highlight',

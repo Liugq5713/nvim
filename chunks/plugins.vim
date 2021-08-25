@@ -26,6 +26,10 @@ Plug 'junegunn/fzf.vim'
 " Icons for different file types
 Plug 'ryanoasis/vim-devicons'
 
+" 剪贴板
+Plug 'junegunn/vim-peekaboo'
+
+
 " git
 Plug 'tpope/vim-fugitive'
 
