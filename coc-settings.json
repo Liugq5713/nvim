@@ -252,6 +252,7 @@
     "noopener",
     "nvim",
     "pnpm",
+    "quasis",
     "reduck",
     "renderable",
     "slardar",
