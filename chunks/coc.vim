@@ -65,7 +65,7 @@ let g:coc_snippet_next = '<tab>'
 """
 
 " Tools
-nmap          <leader>e                :CocCommand explorer<CR>
+nmap          <leader>h                :CocCommand explorer<CR>
 " Goto s
 nmap <silent> g[                <Plug>(coc-diagnostic-prev)
 nmap <silent> g]                <Plug>(coc-diagnostic-next)
