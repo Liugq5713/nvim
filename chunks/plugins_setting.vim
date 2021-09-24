@@ -69,8 +69,9 @@ function! s:defx_keymaps() abort
   nnoremap <silent><buffer><expr> l    <sid>defx_cd_or_open_file()
   nnoremap <silent><buffer><expr> e    <sid>defx_cd_or_open_file()
 
-  
-  nnoremap <silent><buffer><expr> o     defx#do_action('open_or_close_tree')
+  "nnoremap <silent><buffer><expr> e     defx#do_action('multi',['open'])
+  nnoremap <silent><buffer><expr> E     defx#do_action('multi',[['open', 'vsplit'],'quit'])
+  nnoremap <silent><buffer><expr> o     defx#do_action('open_tree', 'toggle')
   nnoremap <silent><buffer><expr> q     defx#do_action('quit')
   nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')
   nnoremap <silent><buffer><expr> yy    defx#do_action('yank_path')
