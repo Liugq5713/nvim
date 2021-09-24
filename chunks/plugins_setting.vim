@@ -22,7 +22,7 @@ let g:wildfire_objects = {
 " Ref: https://github.com/taigacute/ThinkVim/blob/master/rc/plugins/defx.vim
 
 call defx#custom#option('_', {
-      \ 'columns': 'mark:indent:icons:indent:filename:type',
+	 \ 'columns': 'mark:indent:icons:space:filename:type',
       \ 'winwidth': 40,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
@@ -33,11 +33,6 @@ call defx#custom#option('_', {
 call defx#custom#column('mark', {
       \ 'readonly_icon': '',
       \ 'selected_icon': '✓',
-      \ })
-
-call defx#custom#column('filename', {
-      \ 'min_width': 5,
-      \ 'max_width': 25,
       \ })
 
 call defx#custom#column('time', {
