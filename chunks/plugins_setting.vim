@@ -62,12 +62,12 @@ function! s:defx_keymaps() abort
   nnoremap <silent><buffer><expr> <2-LeftMouse> <sid>defx_toggle_tree_or_open_file()
   nnoremap <silent><buffer><expr> <CR> <sid>defx_toggle_tree_or_open_file()
   nnoremap <silent><buffer><expr> l    <sid>defx_cd_or_open_file()
-  nnoremap <silent><buffer><expr> e    <sid>defx_cd_or_open_file()
 
-  "nnoremap <silent><buffer><expr> e     defx#do_action('multi',['open'])
+  nnoremap <silent><buffer><expr> e     defx#do_action('multi', ['drop','quit'])
   nnoremap <silent><buffer><expr> E     defx#do_action('multi',[['open', 'vsplit'],'quit'])
   nnoremap <silent><buffer><expr> o     defx#do_action('open_tree', 'toggle')
   nnoremap <silent><buffer><expr> q     defx#do_action('quit')
+  nnoremap <silent><buffer><expr> s     defx#do_action('search')
   nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')
   nnoremap <silent><buffer><expr> yy    defx#do_action('yank_path')
   nnoremap <silent><buffer><expr> ~     defx#do_action('cd')
@@ -132,5 +132,5 @@ augroup defx_group
   autocmd BufEnter * call s:browse()
 augroup END
 
-"nmap <leader>e :Defx -toggle<CR>
-nmap <leader>e :Defx -search=`expand('%:p')` `getcwd()`<CR>
+"nmap <leader>e :Defx -search=`expand('%:p')` `getcwd()`<CR>
+nmap <leader>e :Defx `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')` -toggle<CR>

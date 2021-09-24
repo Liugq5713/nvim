@@ -46,3 +46,6 @@ cnoremap <C-k> <Up>
 "indent/unindent visual mode selection with tab/shift+tab
 " displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
+
+" Source Vim configuration file and install plugins
+nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>

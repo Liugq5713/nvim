@@ -40,6 +40,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'joshdick/onedark.vim'
 
 Plug 'morhetz/gruvbox'
+Plug 'luochen1990/rainbow'
 
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
@@ -48,5 +49,8 @@ Plug 'kristijanhusak/defx-icons'
 call plug#end()
 
 colorscheme gruvbox
+
 set background=dark
+
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
