@@ -41,8 +41,23 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'morhetz/gruvbox'
 
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
+
 
 call plug#end()
 
 colorscheme gruvbox
 set background=dark
+
+
+call defx#custom#option('_', {
+      \ 'winwidth': 30,
+      \ 'split': 'vertical',
+      \ 'direction': 'topleft',
+      \ 'show_ignored_files': 0,
+      \ 'buffer_name': '',
+      \ 'toggle': 1,
+      \ 'resume': 1
+      \ })
+
