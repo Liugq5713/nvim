@@ -12,6 +12,8 @@ Plug 'itchyny/lightline.vim'
 
 " 快速选中文本，或者用来替换
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
 Plug 'gcmt/wildfire.vim'
 
 " 使用浏览器打开链接
@@ -28,6 +30,9 @@ Plug 'ryanoasis/vim-devicons'
 
 " 剪贴板
 Plug 'junegunn/vim-peekaboo'
+
+" mark 标记
+Plug 'kshenoy/vim-signature'
 
 
 " git
