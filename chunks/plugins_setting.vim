@@ -132,5 +132,5 @@ augroup defx_group
   autocmd BufEnter * call s:browse()
 augroup END
 
-"nmap <leader>e :Defx -search=`expand('%:p')` `getcwd()`<CR>
-nmap <leader>e :Defx `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')` -toggle<CR>
+nmap <leader>e :Defx -search=`expand('%:p')` `getcwd()` -toggle<CR>
+"nmap <leader>e :Defx `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')` -toggle<CR>
