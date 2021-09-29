@@ -25,7 +25,7 @@ call defx#custom#option('_', {
 	 \ 'columns': 'mark:indent:icons:space:filename:type',
       \ 'winwidth': 40,
       \ 'split': 'vertical',
-      \ 'direction': 'topleft',
+      \ 'direction': 'botright',
       \ 'show_ignored_files': 0,
       \ 'ignored_files': '*.pyc,*.pyd,*~,*.swo,*.swp,.git,.hg,.svn,.bzr,.DS_Store',
       \ })
