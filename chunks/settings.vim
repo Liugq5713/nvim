@@ -25,6 +25,7 @@ set clipboard+=unnamedplus
 set so=10
 set cmdheight=2
 set history=500
+set scrolloff=1
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
