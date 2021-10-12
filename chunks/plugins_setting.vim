@@ -69,7 +69,6 @@ function! s:defx_keymaps() abort
   nnoremap <silent><buffer><expr> q     defx#do_action('quit')
   nnoremap <silent><buffer><expr> u     defx#do_action('preview')
   nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')
-  nnoremap <silent><buffer><expr> yy    defx#do_action('yank_path')
   nnoremap <silent><buffer><expr> ~     defx#do_action('cd')
   nnoremap <silent><buffer><expr><nowait> \  defx#do_action('cd', getcwd())
   nnoremap <silent><buffer><expr> h     defx#do_action('cd', ['..'])
@@ -83,6 +82,7 @@ function! s:defx_keymaps() abort
   nnoremap <silent><buffer><expr> a     defx#do_action('new_file')
   nnoremap <silent><buffer><expr> A     defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> dd    defx#do_action('remove')
+  nnoremap <silent><buffer><expr> yy    defx#do_action('yank_path')
   nnoremap <silent><buffer><expr> r     defx#do_action('rename')
   nnoremap <silent><buffer><expr> !     defx#do_action('execute_command')
   nnoremap <silent><buffer><expr><nowait> c  defx#do_action('copy')
@@ -132,5 +132,5 @@ augroup defx_group
   autocmd BufEnter * call s:browse()
 augroup END
 
-nmap <leader>e :Defx -search=`expand('%:p')` `getcwd()` -toggle<CR>
+nmap <leader>e :Defx -search=`expand('%:p')` `getcwd()`<CR>
 "nmap <leader>e :Defx `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')` -toggle<CR>
