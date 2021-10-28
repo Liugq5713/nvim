@@ -241,6 +241,7 @@
     "hdata",
     "hoverable",
     "immer",
+    "instanceof",
     "jscodeshift",
     "keyof",
     "litbot",
