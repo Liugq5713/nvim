@@ -34,6 +34,9 @@ Plug 'junegunn/vim-peekaboo'
 " mark 标记
 Plug 'kshenoy/vim-signature'
 
+" Markdown
+Plug 'jszakmeister/markdown2ctags'
+Plug 'majutsushi/tagbar'
 
 " git
 Plug 'tpope/vim-fugitive'
