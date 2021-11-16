@@ -1,3 +1,7 @@
+
+let g:floaterm_keymap_toggle =  '<Leader>t'
+
+
 " ===
 " === Wildfire
 " ===
@@ -151,4 +155,5 @@ let g:tagbar_type_markdown = {
     \ },
     \ 'sort': 0,
 \ }
+
 

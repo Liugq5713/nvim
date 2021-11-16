@@ -16,6 +16,8 @@ Plug 'tpope/vim-repeat'
 
 Plug 'gcmt/wildfire.vim'
 
+Plug 'voldikss/vim-floaterm'
+
 " 使用浏览器打开链接
 Plug 'tyru/open-browser.vim'
 " 快速注释
