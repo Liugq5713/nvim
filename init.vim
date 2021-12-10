@@ -18,6 +18,8 @@ source $VIMUSERRUNTIME/chunks/coc.vim
 source $VIMUSERRUNTIME/chunks/undotree.vim
 source $VIMUSERRUNTIME/chunks/plugins_setting.vim
 
+
+
 if executable("rg")
     command! -bang -nargs=* Rg
           \ call fzf#vim#grep(
