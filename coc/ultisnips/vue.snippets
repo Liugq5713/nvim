@@ -24,32 +24,21 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet request_data_platform "Description" b
-export const ${1}= async (
-  params: h.query.data_platform.${2},
-): Promise<h.query.data_platform.${2}> => {
-  return await QueryDataPlatformService.${3}(params);
-};
+snippet vinit "vue ts init" b
+<template>
+  <div class="wrapper">hello {{cnt}}</div>
+</template>
+
+<script setup lang="ts">
+  import { ref } from 'vue'
+
+  const cnt = ref(0)
+
+</script>
+
+<style lang="stylus" scoped>
+.wrapper
+	padding:40px
+</style>
 endsnippet
 
-
-
-snippet vget "Description" b
-export const $2= () => http.get('$1')
-endsnippet
-
-snippet vpost "Description" b
-export const $2= (payload: FormData) => (
-  http.post('$1', payload)
-)
-endsnippet
-
-
-snippet genSlot "generated slot" b
-const gen = (slot:string)=>{
-  return  \`
-$1
-  \${slot}
-\`
-}
-endsnippet

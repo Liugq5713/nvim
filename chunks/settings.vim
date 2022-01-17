@@ -8,6 +8,7 @@ set fileencoding=utf-8
 set smartindent
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set list
 set listchars=tab:»\ ,trail:▞
 set number
@@ -25,7 +26,7 @@ set clipboard+=unnamedplus
 set so=10
 set cmdheight=2
 set history=500
-set scrolloff=1
+set scrolloff=0
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start

@@ -19,6 +19,9 @@ vmap gx <Plug>(openbrowser-smart-search)
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
 
+vmap <leader>f  <Plug>(coc-format)
+nmap <leader>f  <Plug>(coc-format)
+
 " Auto-indent whole file
 nmap <leader>= gg=G``
 
