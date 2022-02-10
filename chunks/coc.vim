@@ -82,10 +82,42 @@ nmap          <leader><leader>  :CocAction<CR>
 xmap          <leader><leader>  <Plug>(coc-codeaction-selected)
 nmap          <leader>a         <Plug>(coc-codeaction-selected)
 " Quick exec
-nmap          <leader>o         :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
+"nmap          <leader>o         :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 nmap          <leader>gi        :CocCommand git.chunkInfo<CR>
 nmap          <leader>le        :CocList extensions<CR>
 nmap          <leader>l<leader> :CocList<CR>
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Run the Code Lens action on the current line.
+nmap <leader>cl  <Plug>(coc-codelens-action)
+
+" Map function and class text objects
+" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+
+
+" Find symbol of current document.
+nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols.
+nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list.
+nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
 """
 """ Autocmd part
 """
@@ -109,5 +141,5 @@ autocmd FileType rust       nnoremap <buffer> to :RustTest -- --nocapture<CR>
 autocmd BufRead,BufNewFile */monorepo/** setlocal expandtab
 autocmd BufRead,BufNewFile */monorepo/** setlocal tabstop=2
 autocmd BufRead,BufNewFile */monorepo/** setlocal shiftwidth=2
-autocmd FileType typescript,typescriptreact
-  \ nnoremap <buffer> <leader>o :CocCommand extension.sortImports<CR>
+"autocmd FileType typescript,typescriptreact
+  "\ nnoremap <buffer> <leader>o :CocCommand extension.sortImports<CR>

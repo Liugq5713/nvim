@@ -173,6 +173,7 @@
     "noopener",
     "nums",
     "nvim",
+    "onix",
     "openapi",
     "pnpm",
     "prismjs",
@@ -197,12 +198,14 @@
     "ultisnips",
     "upsert",
     "uuidv",
+    "vant",
     "vsplit",
     "vuetify",
     "wasm",
     "weapp",
     "wechat",
     "weixin",
+    "xiaohongshu",
     "zoomable"
   ]
 }

@@ -28,8 +28,10 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Icons for different file types
-Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+"Plug 'akinsho/bufferline.nvim'
 
 "" 剪贴板
 "Plug 'junegunn/vim-peekaboo'
@@ -52,12 +54,14 @@ Plug 'yaegassy/coc-volar', {'do': 'yarn install --frozen-lockfile'}
 "Plug 'wojciechkepka/vim-github-dark'
 "Plug 'joshdick/onedark.vim'
 
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
+Plug 'junegunn/goyo.vim'
+"Plug 'rebelot/kanagawa.nvim'
 
-Plug 'rebelot/kanagawa.nvim'
 Plug 'luochen1990/rainbow'
 
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+
 Plug 'kristijanhusak/defx-icons'
 
 Plug 'Pocco81/AutoSave.nvim'
@@ -65,18 +69,20 @@ Plug 'Pocco81/AutoSave.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'justinmk/vim-sneak'
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
-colorscheme kanagawa
-"colorscheme gruvbox
+colorscheme gruvbox
 
 set background=dark
 
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 
-"Plug 'nvim-lualine/lualine.nvim' config
+"Plug 'nvim-lualine/feline.nvim' config
 lua << END
 require('lualine').setup({
    theme = 'gruvbox'

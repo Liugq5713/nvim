@@ -17,7 +17,9 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
 " Comment/uncomment lines
-map <leader>/   <plug>NERDCommenterToggle
+map <leader>m   <plug>NERDCommenterToggle
+
+nnoremap <Leader>/ :noh<cr>
 
 vmap <leader>f  <Plug>(coc-format)
 nmap <leader>f  <Plug>(coc-format)
@@ -52,3 +54,22 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 
 " Source Vim configuration file and install plugins
 nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
+
+
+" bufferline
+" These commands will navigate through buffers in order regardless of which mode you are using
+" e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
+"
+"nnoremap <silent>b] :BufferLineCycleNext<CR>
+"nnoremap <silent>b[ :BufferLineCyclePrev<CR>
+
+" These commands will sort buffers by directory, language, or a custom criteria
+"nnoremap <silent>be :BufferLineSortByExtension<CR>
+"nnoremap <silent>bd :BufferLineSortByDirectory<CR>
+"
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

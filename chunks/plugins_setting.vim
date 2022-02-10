@@ -1,6 +1,4 @@
-
 let g:floaterm_keymap_toggle =  '<Leader>t'
-
 
 " ===
 " === Wildfire
@@ -155,5 +153,17 @@ let g:tagbar_type_markdown = {
     \ },
     \ 'sort': 0,
 \ }
+
+
+" In your init.lua or init.vim
+"lua << EOF
+"require("bufferline").setup{}
+"EOF
+"
+
+
+lua << EOF
+require('telescope').setup{}
+EOF
 
 
