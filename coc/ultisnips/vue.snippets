@@ -26,19 +26,20 @@
 
 snippet vinit "vue ts init" b
 <template>
-  <div class="wrapper">hello {{cnt}}</div>
+  <div class="wrapper">
+	$1
+  </div>
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
-
-  const cnt = ref(0)
 
 </script>
 
 <style lang="stylus" scoped>
-.wrapper
-	padding:40px
 </style>
+endsnippet
+
+snippet vlog "quick console log" b
+console.log("===【dev】===", $1)
 endsnippet
 
