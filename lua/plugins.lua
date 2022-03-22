@@ -28,31 +28,23 @@ packer.startup({
   function(use)
     -- Packer 可以升级自己
     use("wbthomason/packer.nvim")
-    -------------------------- plugins -------------------------------------------
-    use({'neoclide/coc.nvim', branch = 'release'})
-    -- nvim-tree
-    use({
-      "kyazdani42/nvim-tree.lua",
-      requires = "kyazdani42/nvim-web-devicons"
-    })
-    -- lualine
-    use({
-      "nvim-lualine/lualine.nvim",
-      requires = {"kyazdani42/nvim-web-devicons"}
-    })
+    use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+    use "numToStr/Comment.nvim" -- Easily comment stuff
+    use "kyazdani42/nvim-web-devicons"
+    use "kyazdani42/nvim-tree.lua"
+    use "nvim-lualine/lualine.nvim"
+    use({'gcmt/wildfire.vim'})
+    use({'tpope/vim-surround'})
+    use({'tpope/vim-repeat'})
+    use({"Pocco81/AutoSave.nvim"})
 
     use({
       'junegunn/fzf', run = './install --bin'
     })
     use({'junegunn/fzf.vim'})
 
-    --wildfire
-    use({'gcmt/wildfire.vim'})
-    use({'tpope/vim-surround'})
-    use({'tpope/vim-repeat'})
 
     use({'tyru/open-browser.vim' })
-    use({"Pocco81/AutoSave.nvim"})
 
     use({'tpope/vim-fugitive'})
 
@@ -60,23 +52,44 @@ packer.startup({
        'nvim-telescope/telescope.nvim',
        requires = { {'nvim-lua/plenary.nvim'} }
     })
+
     -- treesitter
     use({
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate"
     })
 
-    --------------------- colorschemes --------------------
+    -- lint formatter
+    use({'prettier/vim-prettier',run = 'yarn install', branch = 'release/0.x'})
+    use "MunifTanjim/eslint.nvim"
 
-    -- tokyonight
-    use("folke/tokyonight.nvim")
-     -- gruvbox
-    use({
-      "ellisonleao/gruvbox.nvim",
-      requires = {"rktjmp/lush.nvim"}
-    })
+    --------------------- colorschemes --------------------
+    use({ "ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"} })
 
     -------------------------------------------------------
+
+    --------------------- LSP --------------------
+    use({"neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer"})
+    -- 补全引擎
+    use("hrsh7th/nvim-cmp")
+    -- snippet 引擎
+    use("hrsh7th/vim-vsnip")
+    -- 补全源
+    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+    use("hrsh7th/cmp-path") -- { name = 'path' }
+    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+    -- 常见编程语言代码段
+    use("rafamadriz/friendly-snippets")
+    -- ui
+    use("onsails/lspkind-nvim")
+    use("tami5/lspsaga.nvim" )
+
+    use "jose-elias-alvarez/null-ls.nvim"
+    use "jose-elias-alvarez/nvim-lsp-ts-utils"
+
+    use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
 
     if paccker_bootstrap then
       packer.sync()

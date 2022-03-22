@@ -14,3 +14,13 @@ require("plugin-config.nvim-treesitter")
 require("plugin-config.surround")
 require("plugin-config.coc")
 require("plugin-config.autosave")
+require("plugin-config.wildfire")
+require("plugin-config.null-ls")
+require("plugin-config.prettier")
+
+-- 内置LSP
+require("lsp.setup")
+require("lsp/cmp")
+require("lsp/ui")
+require("lsp.null-ls")
+
