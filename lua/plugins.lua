@@ -29,6 +29,7 @@ packer.startup({
     -- Packer 可以升级自己
     use("wbthomason/packer.nvim")
     -------------------------- plugins -------------------------------------------
+    use({'neoclide/coc.nvim', branch = 'release'})
     -- nvim-tree
     use({
       "kyazdani42/nvim-tree.lua",
@@ -39,7 +40,12 @@ packer.startup({
       "nvim-lualine/lualine.nvim",
       requires = {"kyazdani42/nvim-web-devicons"}
     })
-     -- treesitter
+
+    use ({
+       'nvim-telescope/telescope.nvim',
+       requires = { {'nvim-lua/plenary.nvim'} }
+    })
+    -- treesitter
     use({
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate"
