@@ -10,7 +10,7 @@ end
 local list_keys = require('keybindings').nvimTreeList
 
 require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
-  auto_close = false,
+  auto_close = true,
   auto_reload_on_write = true,
   disable_netrw = false,
   hide_root_folder = false,
@@ -75,7 +75,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
       global = false,
     },
     open_file = {
-      quit_on_open = false,
+      quit_on_open = true,
       resize_window = false,
       window_picker = {
         enable = true,

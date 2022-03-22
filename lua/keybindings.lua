@@ -10,7 +10,7 @@ local opt = {
   silent = true
 }
 
-map("n", "<leader>e", ":NvimTreeFindFile<CR>", opt)
+map("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", opt)
 
 -- 插件快捷键
 local pluginKeys = {}
