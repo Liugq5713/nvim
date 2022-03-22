@@ -74,6 +74,16 @@ _G.packer_plugins = {
     path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  fzf = {
+    loaded = true,
+    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/fzf",
+    url = "https://github.com/junegunn/fzf"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",

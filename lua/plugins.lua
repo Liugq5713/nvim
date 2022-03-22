@@ -41,6 +41,13 @@ packer.startup({
       requires = {"kyazdani42/nvim-web-devicons"}
     })
 
+    use({
+      'junegunn/fzf', run = './install --bin'
+    })
+    use({'junegunn/fzf.vim'})
+
+
+
     use ({
        'nvim-telescope/telescope.nvim',
        requires = { {'nvim-lua/plenary.nvim'} }
