@@ -137,7 +137,6 @@ augroup END
 "nmap <leader>e :Defx -search=`expand('%:p')` `getcwd()`<CR>
 nmap <leader>e :Defx `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')` -toggle<CR>
 
-
 " Add support for markdown files in tagbar.
 let g:tagbar_type_markdown = {
     \ 'ctagstype': 'markdown',

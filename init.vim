@@ -18,7 +18,12 @@ source $VIMUSERRUNTIME/chunks/coc.vim
 source $VIMUSERRUNTIME/chunks/undotree.vim
 source $VIMUSERRUNTIME/chunks/plugins_setting.vim
 
-let g:python3_host_prog ='/usr/bin/python3'
+"let g:python3_host_prog ='/usr/bin/python3'
+let g:python3_host_prog ='/opt/homebrew/bin/python3'
+
+
+"let g:python_host_prog = '/usr/bin/python2'
+"let g:python3_host_prog = '/usr/bin/python3'
 
 if executable("rg")
     command! -bang -nargs=* Rg
