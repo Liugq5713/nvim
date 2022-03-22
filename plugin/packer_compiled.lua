@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["AutoSave.nvim"] = {
+    loaded = true,
+    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/AutoSave.nvim",
+    url = "https://github.com/Pocco81/AutoSave.nvim"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/coc.nvim",
@@ -84,55 +89,45 @@ _G.packer_plugins = {
     path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/lush.nvim",
-    url = "https://github.com/rktjmp/lush.nvim"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["open-browser.vim"] = {
+    loaded = true,
+    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/open-browser.vim",
+    url = "https://github.com/tyru/open-browser.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["plenary.nvim"] = {
+  ["vim-repeat"] = {
     loaded = true,
-    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
+    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   },
-  ["telescope.nvim"] = {
+  ["vim-surround"] = {
     loaded = true,
-    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-    url = "https://github.com/nvim-telescope/telescope.nvim"
+    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
-  ["tokyonight.nvim"] = {
+  ["wildfire.vim"] = {
     loaded = true,
-    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
+    path = "/Users/sarva/.local/share/nvim/site/pack/packer/start/wildfire.vim",
+    url = "https://github.com/gcmt/wildfire.vim"
   }
 }
 

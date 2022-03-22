@@ -46,7 +46,15 @@ packer.startup({
     })
     use({'junegunn/fzf.vim'})
 
+    --wildfire
+    use({'gcmt/wildfire.vim'})
+    use({'tpope/vim-surround'})
+    use({'tpope/vim-repeat'})
 
+    use({'tyru/open-browser.vim' })
+    use({"Pocco81/AutoSave.nvim"})
+
+    use({'tpope/vim-fugitive'})
 
     use ({
        'nvim-telescope/telescope.nvim',
@@ -75,13 +83,3 @@ packer.startup({
     end
   end
 })
-
-
--- 每次保存 plugins.lua 自动安装插件
-pcall(vim.cmd, [[
-augroup packer_user_config
-autocmd!
-autocmd BufWritePost plugins.lua source <afile> | PackerSync
-augroup end
-]])
-
