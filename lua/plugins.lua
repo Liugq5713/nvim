@@ -34,6 +34,7 @@ packer.startup({
 	function(use)
 		-- Packer 可以升级自己
 		use("wbthomason/packer.nvim")
+		use({"neoclide/coc.nvim",branch = "release"})
 		use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 		use("numToStr/Comment.nvim") -- Easily comment stuff
 		use("kyazdani42/nvim-web-devicons")
@@ -44,7 +45,6 @@ packer.startup({
 		use({ "gcmt/wildfire.vim" })
 		use("lukas-reineke/indent-blankline.nvim")
 		use("goolord/alpha-nvim")
-		use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 		use({ "tpope/vim-surround" })
 		use({ "tpope/vim-repeat" })
 		use({ "Pocco81/AutoSave.nvim" })
@@ -69,9 +69,6 @@ packer.startup({
 			run = ":TSUpdate",
 		})
 
-		-- lint formatter
-		use({ "prettier/vim-prettier", run = "yarn install", branch = "release/0.x" })
-		use("MunifTanjim/eslint.nvim")
 
 		--------------------- colorschemes --------------------
 		use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
@@ -79,6 +76,7 @@ packer.startup({
 		-------------------------------------------------------
 
 		--------------------- LSP --------------------
+    --[[
 		use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
@@ -97,6 +95,7 @@ packer.startup({
 
 		use("jose-elias-alvarez/nvim-lsp-ts-utils")
 		use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
+    --]]
 
 		if paccker_bootstrap then
 			packer.sync()
