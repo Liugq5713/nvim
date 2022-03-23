@@ -1,30 +1,26 @@
 local null_ls = require("null-ls")
-local eslint = require("eslint")
+
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
+local formatting = null_ls.builtins.formatting
 
 null_ls.setup({
     sources = {
-        require("null-ls").builtins.formatting.stylua,
+        formatting.stylua,
+    		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+        formatting.stylelint,
+        formatting.eslint,
+    		formatting.black.with({ extra_args = { "--fast" } }),
         require("null-ls").builtins.diagnostics.eslint,
         require("null-ls").builtins.completion.spell,
     },
-})
-
-eslint.setup({
-  bin = 'eslint', -- or `eslint_d`
-  code_actions = {
-    enable = true,
-    apply_on_save = {
-      enable = true,
-      types = { "problem" }, -- "directive", "problem", "suggestion", "layout"
-    },
-    disable_rule_comment = {
-      enable = true,
-      location = "separate_line", -- or `same_line`
-    },
-  },
-  diagnostics = {
-    enable = true,
-    report_unused_disable_directives = false,
-    run_on = "type", -- or `save`
-  },
+  on_attach = function(client)
+        if client.resolved_capabilities.document_formatting then
+            vim.cmd([[
+            augroup LspFormatting
+                autocmd! * <buffer>
+                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+            augroup END
+            ]])
+        end
+    end
 })
