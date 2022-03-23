@@ -4,7 +4,7 @@ vim.o.fileencoding = "utf-8"
 -- jkhl 移动时光标周围保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
-vim.o.clipboard="unnamedplus"
+vim.o.clipboard = "unnamedplus"
 -- 使用相对行号
 vim.wo.number = true
 -- 高亮所在行
@@ -70,7 +70,7 @@ vim.opt.termguicolors = true
 vim.o.list = true
 -- 补全增强
 vim.o.wildmenu = true
--- Dont' pass messages to |ins-completin menu|
+-- Don't pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. "c"
 -- 补全最多显示10行
 vim.o.pumheight = 10
@@ -80,4 +80,5 @@ vim.o.showtabline = 0
 vim.o.showmode = false
 -- 进入Terminal 自动进入插入模式
 vim.cmd("autocmd TermOpen * startinsert")
-
+-- backspace behaviour
+vim.o.backspace = [[indent,eol,start]]
