@@ -10,7 +10,7 @@ local servers = {
 	jsonls = require("lsp.config.json"),
 	tsserver = require("lsp.config.ts"),
 	-- volar = require("lsp.config.volar"),
-	remark_ls = require("lsp.config.markdown"),
+	-- remark_ls = require("lsp.config.markdown"),
 	-- html = {},
 }
 
