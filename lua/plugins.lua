@@ -39,7 +39,12 @@ packer.startup({
 		use("kyazdani42/nvim-web-devicons")
 		use("kyazdani42/nvim-tree.lua")
 		use("nvim-lualine/lualine.nvim")
+		use("ahmedkhalf/project.nvim")
+		use("lewis6991/impatient.nvim")
 		use({ "gcmt/wildfire.vim" })
+		use("lukas-reineke/indent-blankline.nvim")
+		use("goolord/alpha-nvim")
+		use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 		use({ "tpope/vim-surround" })
 		use({ "tpope/vim-repeat" })
 		use({ "Pocco81/AutoSave.nvim" })
@@ -90,9 +95,7 @@ packer.startup({
 		use("onsails/lspkind-nvim")
 		use("tami5/lspsaga.nvim")
 
-		use("jose-elias-alvarez/null-ls.nvim")
 		use("jose-elias-alvarez/nvim-lsp-ts-utils")
-
 		use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
 		if paccker_bootstrap then

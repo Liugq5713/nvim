@@ -18,6 +18,9 @@ require("plugin-config.comment")
 require("plugin-config.wildfire")
 require("plugin-config.null-ls")
 require("plugin-config.prettier")
+require("plugin-config.alpha")
+require("plugin-config.impatient")
+require("plugin-config.indentline")
 
 -- 内置LSP
 require("lsp.setup")
