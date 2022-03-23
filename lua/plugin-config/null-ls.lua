@@ -6,12 +6,13 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
     sources = {
         formatting.stylua,
-    		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
         formatting.stylelint,
+        formatting.codespell,
         formatting.eslint,
     		formatting.black.with({ extra_args = { "--fast" } }),
-        require("null-ls").builtins.diagnostics.eslint,
-        require("null-ls").builtins.completion.spell,
+        null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.code_actions.eslint,
+        null_ls.builtins.completion.spell,
     },
   on_attach = function(client)
         if client.resolved_capabilities.document_formatting then

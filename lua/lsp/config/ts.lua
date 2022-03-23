@@ -1,4 +1,4 @@
-local keybindings = requirePlugin("keybindings")
+local keybindings = require("keybindings")
 if not keybindings then
   return
 end

@@ -21,8 +21,8 @@ map("n", "<C-h>", ":History<CR>", opt)
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 map("n", "<C-e>", ":Telescope live_grep<CR>", opt)
 
-map("n", "<leader>f", ":Prettier<CR>", opt)
-map("x", "<leader>f", ":Prettier<CR>", opt)
+-- map("n", "<leader>f", ":Prettier<CR>", opt)
+-- map("x", "<leader>f", ":Prettier<CR>", opt)
 
 -- Telescope 列表中 插入模式快捷键
 pluginKeys.telescopeList = {

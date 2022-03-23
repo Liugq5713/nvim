@@ -7,9 +7,9 @@ local lsp_installer = require("nvim-lsp-installer")
 local servers = {
   sumneko_lua = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
   -- rust_analyzer = require("lsp.lang.rust"),
-  -- jsonls = require("lsp.lang.json"),
-  -- tsserver = require("lsp.config.ts"),
-  -- remark_ls = require("lsp.lang.markdown"),
+  -- jsonls = require("lsp.config.json"),
+  tsserver = require("lsp.config.ts"),
+  remark_ls = require("lsp.config.markdown"),
   -- html = {},
 }
 
