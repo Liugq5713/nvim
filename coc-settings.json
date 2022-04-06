@@ -1,6 +1,5 @@
 {
   "coc-webpack.enable": true,
-  "coc.preferences.colorSupport": true,
   "coc.preferences.enableFloatHighlight": true,
   "coc.preferences.extensionUpdateCheck": "weekly",
   "coc.preferences.formatOnSaveFiletypes": ["js"],
@@ -151,6 +150,7 @@
     "docgen",
     "dockerignore",
     "dtsgenerator",
+    "echarts",
     "echodoc",
     "encyclopaedia",
     "eruda",

@@ -167,7 +167,7 @@ end
 
 -- coc.nvim
 map("n", "<leader>rn", "<Plug>(coc-rename)", {})
-map("n", "<leader><leader>", ":CocAction", {})
+map("n", "<leader><leader>", ":CocAction<CR>", {})
 
 map("n", "[g", "<Plug>(coc-diagnostic-prev)", {})
 map("n", "g]", "<Plug>(coc-diagnostic-next)", {})
@@ -175,6 +175,9 @@ map("n", "gd", "<Plug>(coc-definition)", {})
 map("n", "gy", "<Plug>(coc-type-definition)", {})
 map("n", "gi", "<Plug>(coc-implementation)", {})
 map("n", "gr", "<Plug>(coc-references)", {})
+
+map("x", "<leader><leader>", "<Plug>(coc-codeaction-selected)", {})
+
 
 map("i", "<C-j>", "pumvisible() ? '<C-n>' : '<TAB>'", {noremap = true, silent = true, expr = true})
 map("i", "<C-k>", "pumvisible() ? '<C-p>' : '<C-h>'", {noremap = true, expr = true})

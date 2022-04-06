@@ -4,6 +4,7 @@ silent! au BufEnter,BufRead,BufNewFile * silent! unmap if
 " Extension list
 let g:coc_global_extensions = [
   \ 'coc-html',
+  \ '@yaegassy/coc-volar',
   \ 'coc-json',
   \ 'coc-css',
   \ 'coc-tsserver',
@@ -60,25 +61,11 @@ let g:coc_snippet_next = '<tab>'
 """ Keymaps
 """
 
-" Tools
-nmap          <leader>h                :CocCommand explorer<CR>
-" Goto s
-nmap <silent> g[                <Plug>(coc-diagnostic-prev)
-nmap <silent> g]                <Plug>(coc-diagnostic-next)
-nmap <silent> gd                <Plug>(coc-definition)
-nmap <silent> gy                <Plug>(coc-type-definition)
-nmap <silent> gi                <Plug>(coc-implementation)
-nmap <silent> gr                <Plug>(coc-references)
 
-" Quick edit
-nmap          <leader>rn        <Plug>(coc-rename)
 " CodeAction
 nmap          ?                 :CocFix<CR>
-nmap          <leader><leader>  :CocAction<CR>
-xmap          <leader><leader>  <Plug>(coc-codeaction-selected)
 nmap          <leader>a         <Plug>(coc-codeaction-selected)
 " Quick exec
-"nmap          <leader>o         :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 nmap          <leader>gi        :CocCommand git.chunkInfo<CR>
 nmap          <leader>le        :CocList extensions<CR>
 nmap          <leader>l<leader> :CocList<CR>
