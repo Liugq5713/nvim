@@ -6,32 +6,9 @@ if not status then
 	return
 end
 
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
-vim.g.nvim_tree_icons = {
-	default = "",
-	symlink = "",
-	git = {
-		unstaged = "",
-		staged = "S",
-		unmerged = "",
-		renamed = "➜",
-		deleted = "",
-		untracked = "U",
-		ignored = "◌",
-	},
-	folder = {
-		default = "",
-		open = "",
-		empty = "",
-		empty_open = "",
-		symlink = "",
-	},
-}
-
 require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
-	auto_close = true,
 	auto_reload_on_write = true,
-	disable_netrw = false,
+	disable_netrw = true,
 	hijack_cursor = false,
 	hijack_netrw = true,
 	hijack_unnamed_buffer_when_opening = false,
@@ -68,7 +45,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 		args = {},
 	},
 	diagnostics = {
-		enable = true,
+		enable = false,
 		show_on_dirs = false,
 		icons = {
 			hint = "",
