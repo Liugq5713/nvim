@@ -1,5 +1,3 @@
-let $VIMUSERRUNTIME = fnamemodify($MYVIMRC, ':p:h')
-
 source $VIMUSERRUNTIME/chunks/coc.vim
 
 lua << EOF
@@ -23,6 +21,8 @@ require("plugin-config.wildfire")
 require("plugin-config.alpha")
 require("plugin-config.impatient")
 require("plugin-config.indentline")
+
+require('plugin-config.outline')
 EOF
 
 "let g:python3_host_prog ='/usr/bin/python3'

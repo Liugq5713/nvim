@@ -1,4 +1,4 @@
-# MY NEOVIM CONFIG
+# MY  NEOVIM CONFIG
 
 for frontend engineer
 

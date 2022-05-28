@@ -48,6 +48,7 @@ packer.startup({
 		use({ "tpope/vim-surround" })
 		use({ "tpope/vim-repeat" })
 		use({ "Pocco81/AutoSave.nvim" })
+    use({ "junegunn/goyo.vim" })
 
 		use({
 			"junegunn/fzf",
@@ -96,6 +97,8 @@ packer.startup({
 		use("jose-elias-alvarez/nvim-lsp-ts-utils")
 		use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
     --]]
+
+    use('simrat39/symbols-outline.nvim')
 
 		if paccker_bootstrap then
 			packer.sync()
