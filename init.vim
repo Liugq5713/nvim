@@ -1,3 +1,5 @@
+let $VIMUSERRUNTIME = fnamemodify($MYVIMRC, ':p:h')
+
 source $VIMUSERRUNTIME/chunks/coc.vim
 
 lua << EOF
