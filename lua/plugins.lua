@@ -45,7 +45,7 @@ packer.startup({
 		use({ "gcmt/wildfire.vim" })
 		use("lukas-reineke/indent-blankline.nvim")
 		use("goolord/alpha-nvim")
-		use({ "tpope/vim-surround" })
+    use({ "machakann/vim-sandwich" })
 		use({ "tpope/vim-repeat" })
 		use({ "Pocco81/AutoSave.nvim" })
     use({ "junegunn/goyo.vim" })
