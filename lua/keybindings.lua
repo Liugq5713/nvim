@@ -18,8 +18,15 @@ local pluginKeys = {}
 map("n", "<C-g>", ":GFiles?<CR>", opt)
 map("n", "<C-h>", ":History<CR>", opt)
 -- Telescope
-map("n", "<C-p>", ":Telescope find_files<CR>", opt)
-map("n", "<C-e>", ":Telescope live_grep<CR>", opt)
+vim.api.nvim_set_keymap('n', '<C-p>', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-f>', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-b>', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
+
+
+-- terminal
+vim.api.nvim_set_keymap("n", "<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = true})
+
 
 -- map("n", "<leader>f", ":Prettier<CR>", opt)
 -- map("x", "<leader>f", ":Prettier<CR>", opt)
@@ -168,6 +175,9 @@ end
 -- coc.nvim
 map("n", "<leader>rn", "<Plug>(coc-rename)", {})
 map("n", "<leader><leader>", ":CocAction<CR>", {})
+
+vim.api.nvim_set_keymap("n", "<leader>l", ":CocCommand eslint.executeAutofix<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>f", ":CocCommand prettier.formatFile<CR>", {noremap = true})
 
 map("n", "[g", "<Plug>(coc-diagnostic-prev)", {})
 map("n", "g]", "<Plug>(coc-diagnostic-next)", {})
