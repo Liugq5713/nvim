@@ -64,6 +64,9 @@ packer.startup({
 			requires = { { "nvim-lua/plenary.nvim" } },
 		})
 
+    use ({"akinsho/toggleterm.nvim", tag = 'v1.*' })
+    use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end, })
+
 		-- treesitter
 		use({
 			"nvim-treesitter/nvim-treesitter",
@@ -99,6 +102,7 @@ packer.startup({
     --]]
 
     use('simrat39/symbols-outline.nvim')
+   
 
 		if paccker_bootstrap then
 			packer.sync()

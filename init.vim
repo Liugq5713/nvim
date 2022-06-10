@@ -22,6 +22,7 @@ require("plugin-config.wildfire")
 require("plugin-config.alpha")
 require("plugin-config.impatient")
 require("plugin-config.indentline")
+require("plugin-config.toggleterm")
 
 require('plugin-config.outline')
 EOF
