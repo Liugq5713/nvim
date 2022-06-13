@@ -53,16 +53,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 			warning = "",
 			error = "",
 		},
-    git = {
-      unstaged = "✗",
-      staged = "✓",
-      unmerged = "",
-      renamed = "➜",
-      untracked = "★",
-      deleted = "",
-      ignored = "◌",
-    },
-	},
+  },
 	filters = {
 		dotfiles = false,
 		custom = {},
