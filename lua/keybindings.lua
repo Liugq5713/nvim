@@ -11,6 +11,7 @@ local opt = {
 }
 
 map("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", opt)
+map("n", "gx", "<Plug>(openbrowser-smart-search)", opt)
 
 -- 插件快捷键
 local pluginKeys = {}
