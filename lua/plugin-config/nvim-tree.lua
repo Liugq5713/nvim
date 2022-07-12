@@ -18,7 +18,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 	sort_by = "name",
 	update_cwd = false,
 	view = {
-		width = 40,
+		width = 50,
 		height = 30,
 		side = "right",
 		preserve_window_proportions = false,
