@@ -95,4 +95,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 			git = false,
 		},
 	},
+   filters = {
+    dotfiles = false,
+  },
 }) -- END_DEFAULT_OPTSn
