@@ -9,11 +9,8 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-tsserver',
   \ 'coc-lists',
-  \ 'coc-gitignore',
   \ 'coc-vimlsp',
   \ 'coc-lists',
-  \ 'coc-git',
-  \ 'coc-explorer',
   \ 'coc-sourcekit',
   \ 'coc-highlight',
   \ 'coc-snippets',
@@ -21,12 +18,8 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-webpack',
   \ 'coc-spell-checker',
-  \ 'coc-rust-analyzer',
   \ 'coc-texlab',
-  \ 'coc-flutter',
-  \ 'coc-cssmodules',
   \ 'coc-pairs',
-  \ 'coc-styled-components',
   \ ]
 
 " Intellisense
