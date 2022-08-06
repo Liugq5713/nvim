@@ -189,9 +189,4 @@ map("n", "gr", "<Plug>(coc-references)", {})
 
 map("x", "<leader><leader>", "<Plug>(coc-codeaction-selected)", {})
 
-
-map("i", "<C-j>", "pumvisible() ? '<C-n>' : '<TAB>'", {noremap = true, silent = true, expr = true})
-map("i", "<C-k>", "pumvisible() ? '<C-p>' : '<C-h>'", {noremap = true, expr = true})
-map("i", "<CR>", "pumvisible() ? coc#_select_confirm() : '<C-G>u<CR><C-R>=coc#on_enter()<CR>'", {silent = true, expr = true, noremap = true})
-
 return pluginKeys
