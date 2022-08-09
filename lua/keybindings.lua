@@ -23,10 +23,16 @@ vim.api.nvim_set_keymap('n', '<C-p>', "<cmd>lua require('telescope.builtin').fin
 vim.api.nvim_set_keymap('n', '<leader>k', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-b>', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
 
+-- vistal 
+vim.api.nvim_set_keymap("n", "T", ":Vista!!<CR>", {noremap = true, silent = true})
 
 -- terminal
 vim.api.nvim_set_keymap("n", "<leader>t", ":ToggleTerm<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = true})
+
+-- git gutter
+vim.api.nvim_set_keymap("n", "[h", ":GitGutterPrevHunk<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "h]", ":GitGutterNextHunk<CR>", {noremap = true, silent = true})
 
 
 -- map("n", "<leader>f", ":Prettier<CR>", opt)

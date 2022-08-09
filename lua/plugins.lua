@@ -58,7 +58,10 @@ packer.startup({
 
 		use({ "tyru/open-browser.vim" })
 
+    use({ "liuchengxu/vista.vim"})
+
 		use({ "tpope/vim-fugitive" })
+
 		use({
 			"nvim-telescope/telescope.nvim",
 			requires = { { "nvim-lua/plenary.nvim" } },
