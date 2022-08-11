@@ -221,6 +221,9 @@
     "wechat",
     "weixin",
     "xiaohongshu",
-    "zoomable"
+    "zoomable",
+    "deepmerge",
+    "rawlist",
+    "globby"
   ]
 }
