@@ -32,7 +32,7 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = t
 
 -- git gutter
 vim.api.nvim_set_keymap("n", "[h", ":GitGutterPrevHunk<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "h]", ":GitGutterNextHunk<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "]h", ":GitGutterNextHunk<CR>", {noremap = true, silent = true})
 
 
 -- map("n", "<leader>f", ":Prettier<CR>", opt)
@@ -187,7 +187,7 @@ vim.api.nvim_set_keymap("n", "<leader>l", ":CocCommand eslint.executeAutofix<CR>
 vim.api.nvim_set_keymap("n", "<leader>f", ":CocCommand prettier.formatFile<CR>", {noremap = true})
 
 map("n", "[g", "<Plug>(coc-diagnostic-prev)", {})
-map("n", "g]", "<Plug>(coc-diagnostic-next)", {})
+map("n", "]g", "<Plug>(coc-diagnostic-next)", {})
 map("n", "gd", "<Plug>(coc-definition)", {})
 map("n", "gy", "<Plug>(coc-type-definition)", {})
 map("n", "gi", "<Plug>(coc-implementation)", {})

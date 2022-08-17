@@ -10,3 +10,7 @@ for frontend engineer
 
 - [SpaceVim/SpaceVim: A community-driven modular vim/neovim distribution - The ultimate vimrc](https://github.com/SpaceVim/SpaceVim)
 - [nvim/README_cn.md at master · theniceboy/nvim](https://github.com/theniceboy/nvim/blob/master/README_cn.md)
+
+## 参考文章
+
+[My Neovim setup for React, TypeScript, Tailwind CSS, etc - DEV Community 👩‍💻👨‍💻](https://dev.to/craftzdog/my-neovim-setup-for-react-typescript-tailwind-css-etc-58fb)
