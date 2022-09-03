@@ -9,7 +9,7 @@ for frontend engineer
 ## 优秀的配置
 
 - [SpaceVim/SpaceVim: A community-driven modular vim/neovim distribution - The ultimate vimrc](https://github.com/SpaceVim/SpaceVim)
-- [nvim/README_cn.md at master · theniceboy/nvim](https://github.com/theniceboy/nvim/blob/master/README_cn.md)
+- [nvim/READMEcn.md at master · theniceboy/nvim](https://github.com/theniceboy/nvim/blob/master/README_cn.md)
 
 ## 参考文章
 
