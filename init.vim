@@ -1,6 +1,6 @@
 let $VIMUSERRUNTIME = fnamemodify($MYVIMRC, ':p:h')
 
-source $VIMUSERRUNTIME/chunks/coc.vim
+" source $VIMUSERRUNTIME/chunks/coc.vim
 
 let g:vista_default_executive = 'coc'
 let g:vista_fzf_preview = ['right:50%']
@@ -26,6 +26,21 @@ require("plugins")
 require("keybindings")
 -- 主题设置
 require("colorscheme")
+
+require('lsp.setup')
+
+-- 内置LSP
+require("lsp.setup")
+require("lsp.ui")
+-- 自动补全
+require("cmp.cmp")
+-- 格式化
+-- require("lsp.formatter")
+require("lsp.null-ls")
+-- DAP
+-- require("dap.vimspector")
+require("dap.nvim-dap")
+
 
 -- 插件配置
 require("plugin-config.nvim-tree")
