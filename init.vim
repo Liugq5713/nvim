@@ -37,10 +37,12 @@ require("plugin-config.wildfire")
 require("plugin-config.alpha")
 require("plugin-config.impatient")
 require("plugin-config.indentline")
-require("plugin-config.toggleterm")
+-- require("plugin-config.toggleterm")
 
 require('plugin-config.outline')
 EOF
 
 "let g:python3_host_prog ='/usr/bin/python3'
+let g:python_host_skip_check=1
+let g:python3_host_skip_check=1
 let g:python3_host_prog ='/opt/homebrew/bin/python3'
