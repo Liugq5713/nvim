@@ -17,16 +17,7 @@
   "eslint.packageManager": "npm",
   "eslint.format.enable": true,
   "eslint.alwaysShowStatus": true,
-  "eslint.probe": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "html",
-    "vue",
-    "markdown",
-    "json"
-  ],
+  "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "vue", "markdown", "json"],
   "volar.enable": true,
   "git.addGBlameToBufferVar": false,
   "git.addGBlameToVirtualText": false,
@@ -225,6 +216,8 @@
     "deepmerge",
     "rawlist",
     "importmap",
-    "globby"
+    "globby",
+    "antdv",
+    "antd"
   ]
 }
