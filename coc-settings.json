@@ -3,7 +3,6 @@
   "coc.preferences.extensionUpdateCheck": "weekly",
   "coc.preferences.formatOnSaveFiletypes": ["js"],
   "coc.preferences.formatOnType": false,
-  "coc.preferences.snippetStatusText": "Ⓢ ",
   "codeLens.enable": true,
   "diagnostic.displayByAle": false,
   "diagnostic.errorSign": "﮻",
@@ -74,13 +73,13 @@
     "variable": ""
   },
   "suggest.detailField": "preview",
-  "suggest.detailMaxLength": 60,
+  "suggest.labelMaxLength": 60,
   "suggest.enablePreselect": false,
   "suggest.noselect": true,
   "suggest.snippetIndicator": "",
   "suggest.timeout": 5000,
   "suggest.triggerAfterInsertEnter": false,
-  "suggest.triggerCompletionWait": 100,
+  "suggest.triggerCompletionWait": 50,
   "typescript.referencesCodeLens.enable": false,
   "cSpell.userWords": [
     "APIV",
