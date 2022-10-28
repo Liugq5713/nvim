@@ -217,6 +217,7 @@
     "importmap",
     "globby",
     "antdv",
-    "antd"
+    "antd",
+    "pinia"
   ]
 }
