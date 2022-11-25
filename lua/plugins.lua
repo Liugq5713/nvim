@@ -37,14 +37,10 @@ packer.startup({
 		use({"neoclide/coc.nvim",branch = "release"})
 		use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 		use("numToStr/Comment.nvim") -- Easily comment stuff
-		use("kyazdani42/nvim-web-devicons")
 		use("kyazdani42/nvim-tree.lua")
-		use("nvim-lualine/lualine.nvim")
-		use("ahmedkhalf/project.nvim")
+	  use("ahmedkhalf/project.nvim")
 		use("lewis6991/impatient.nvim")
 		use({ "gcmt/wildfire.vim" })
-		use("lukas-reineke/indent-blankline.nvim")
-		use("goolord/alpha-nvim")
     use({ "machakann/vim-sandwich" })
 		use({ "tpope/vim-repeat" })
 		use({ "Pocco81/AutoSave.nvim" })
@@ -77,8 +73,18 @@ packer.startup({
 		})
 
 
-		--------------------- colorschemes --------------------
+		--------------------- look --------------------
+		use("kyazdani42/nvim-web-devicons")
+		use("lukas-reineke/indent-blankline.nvim")
+		use("nvim-lualine/lualine.nvim")
 		use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
+    use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+}
 
 		-------------------------------------------------------
 

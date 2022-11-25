@@ -1,7 +1,6 @@
 {
   "coc-webpack.enable": true,
   "coc.preferences.extensionUpdateCheck": "weekly",
-  "coc.preferences.formatOnSaveFiletypes": ["js"],
   "coc.preferences.formatOnType": false,
   "codeLens.enable": true,
   "diagnostic.displayByAle": false,
@@ -18,6 +17,10 @@
   "eslint.alwaysShowStatus": true,
   "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "vue", "markdown", "json"],
   "volar.enable": true,
+  "volar.autoClosingTags":true,
+  "volar.autoCompleteRefs":true,
+  "volar.takeOverMode.enabled":true,
+  "tsserver.enable": false,
   "git.addGBlameToBufferVar": false,
   "git.addGBlameToVirtualText": false,
   "git.addedSign.hlGroup": "GitGutterAdd",
@@ -36,7 +39,6 @@
   "git.virtualTextPrefix": " ❯❯❯ ",
 
   "html.format.enable": true,
-  "javascript.referencesCodeLens.enable": true,
   "javascript.showUnused": true,
   "javascript.suggest.names": true,
   "javascript.suggestionActions.enabled": true,
@@ -80,7 +82,6 @@
   "suggest.timeout": 5000,
   "suggest.triggerAfterInsertEnter": false,
   "suggest.triggerCompletionWait": 50,
-  "typescript.referencesCodeLens.enable": false,
   "cSpell.userWords": [
     "APIV",
     "BOARDSTATUS",
