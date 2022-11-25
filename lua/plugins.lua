@@ -78,14 +78,7 @@ packer.startup({
 		use("lukas-reineke/indent-blankline.nvim")
 		use("nvim-lualine/lualine.nvim")
 		use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
-    use {
-    'goolord/alpha-nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.startify'.config)
-    end
-}
-
+    use({'mhinz/vim-startify'})
 		-------------------------------------------------------
 
 		--------------------- LSP --------------------
