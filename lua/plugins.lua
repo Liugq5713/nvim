@@ -41,30 +41,30 @@ packer.startup({
 	  use("ahmedkhalf/project.nvim")
 		use("lewis6991/impatient.nvim")
 		use({ "gcmt/wildfire.vim" })
-    use({ "machakann/vim-sandwich" })
-		use({ "tpope/vim-repeat" })
-		use({ "Pocco81/AutoSave.nvim" })
     use({ "junegunn/goyo.vim" })
 
+    -- search --
 		use({
 			"junegunn/fzf",
 			run = "./install --bin",
 		})
 		use({ "junegunn/fzf.vim" })
-
-		use({ "tyru/open-browser.vim" })
-
-    use({ "liuchengxu/vista.vim"})
-
-		use({ "tpope/vim-fugitive" })
-
 		use({
 			"nvim-telescope/telescope.nvim",
 			requires = { { "nvim-lua/plenary.nvim" } },
 		})
 
+    -- enhance --
+		use({ "tyru/open-browser.vim" })
+    use({ "machakann/vim-sandwich" })
+		use({ "tpope/vim-repeat" })
+		use({ "Pocco81/AutoSave.nvim" })
     use ({"akinsho/toggleterm.nvim", tag = 'v1.*' })
     use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end, })
+
+    use({ "liuchengxu/vista.vim"})
+
+		use({ "tpope/vim-fugitive" })
 
 		-- treesitter
 		use({
