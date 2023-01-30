@@ -58,7 +58,7 @@ packer.startup({
 		use({ "tyru/open-browser.vim" })
     use({ "machakann/vim-sandwich" })
 		use({ "tpope/vim-repeat" })
-		use({ "Pocco81/AutoSave.nvim" })
+		use({ "pocco81/auto-save.nvim" })
     use ({"akinsho/toggleterm.nvim", tag = 'v1.*' })
     use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end, })
 
