@@ -79,6 +79,8 @@ packer.startup({
 		use("nvim-lualine/lualine.nvim")
 		use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
     use({'mhinz/vim-startify'})
+    use({ 'echasnovski/mini.map', branch = 'stable' })
+
 		-------------------------------------------------------
 
 		--------------------- LSP --------------------

@@ -39,6 +39,7 @@ require("plugin-config.impatient")
 require("plugin-config.indentline")
 -- require("plugin-config.toggleterm")
 
+require('plugin-config.mini-map')
 require('plugin-config.outline')
 EOF
 
