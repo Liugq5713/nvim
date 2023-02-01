@@ -17,7 +17,6 @@ telescope.setup({
   pickers = {
     find_files = {
       theme='ivy'
-      -- theme = "dropdown", -- 可选参数： dropdown, cursor, ivy
     }
   },
   extensions = {},

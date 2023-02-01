@@ -39,7 +39,7 @@ require("plugin-config.autosave")
 require("plugin-config.comment")
 require("plugin-config.wildfire")
 require("plugin-config.impatient")
-require("plugin-config.indentline")
+-- require("plugin-config.indentline")
 -- require("plugin-config.toggleterm")
 
 require('plugin-config.mini-map')
