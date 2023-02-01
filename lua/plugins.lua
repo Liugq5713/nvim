@@ -51,6 +51,33 @@ packer.startup({
         require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
       end
     }
+
+    use {
+      "gaoDean/autolist.nvim",
+      ft = {
+        "markdown",
+        "text",
+        "tex",
+        "plaintex",
+      },
+    }
+
+    use  {
+      "SmiteshP/nvim-navic",
+      requires = "neovim/nvim-lspconfig",
+      config = function()
+        require("lvim.core.breadcrumbs").setup()
+      end,
+    }
+
+    use {
+      "akinsho/bufferline.nvim",
+      config = function()
+        require("lvim.core.bufferline").setup()
+      end,
+      branch = "main",
+    }
+   
     -- search --
 		use({
 			"junegunn/fzf",

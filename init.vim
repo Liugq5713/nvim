@@ -28,6 +28,9 @@ require("keybindings")
 require("colorscheme")
 
 -- 插件配置
+-- require('lvim.core.breadcrumbs')
+-- require('lvim.core.bufferline')
+-- require('lvim.core.autolist')
 require("plugin-config.nvim-tree")
 require("plugin-config.lualine")
 require("plugin-config.nvim-treesitter")
