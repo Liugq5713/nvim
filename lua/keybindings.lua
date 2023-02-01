@@ -19,7 +19,7 @@ local pluginKeys = {}
 map("n", "<C-g>", ":GFiles?<CR>", opt)
 map("n", "<C-h>", ":History<CR>", opt)
 -- Telescope
-vim.api.nvim_set_keymap('n', '<leader>f', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>p', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>k', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>j', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
 
@@ -184,7 +184,7 @@ map("n", "<leader>rn", "<Plug>(coc-rename)", {})
 map("n", "<leader><leader>", ":CocAction<CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>l", ":CocCommand eslint.executeAutofix<CR>", {})
--- vim.api.nvim_set_keymap("n", "<leader>f", ":CocCommand prettier.formatFile<CR>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>f", ":CocCommand prettier.formatFile<CR>", {noremap = true})
 
 map("n", "[g", "<Plug>(coc-diagnostic-prev)", {})
 map("n", "]g", "<Plug>(coc-diagnostic-next)", {})
