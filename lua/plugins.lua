@@ -74,20 +74,20 @@ require("lazy").setup(
         -- {
         --     "akinsho/bufferline.nvim",
         --     config = function()
-        --         require("lvim.core.bufferline").setup()
+       --         require("lvim.core.bufferline").setup()
         --     end,
         --     branch = "main"
         -- },
         {
             "junegunn/fzf",
-            run = "./install --bin"
         },
         {"junegunn/fzf.vim"},
         {
             "nvim-telescope/telescope.nvim",
-            requires = "nvim-lua/plenary.nvim",
+            dependencies = "nvim-lua/plenary.nvim",
+            lazy = true,
             config = function()
-              require('plugin-config/telescope').setup()
+              require('plugin-config/telescope')
             end
         },
         -- enhance --
@@ -95,7 +95,7 @@ require("lazy").setup(
         {"machakann/vim-sandwich"},
         {"tpope/vim-repeat"},
         {"pocco81/auto-save.nvim"},
-        {"akinsho/toggleterm.nvim", tag = "v1.*"},
+        -- {"akinsho/toggleterm.nvim", tag = "v1.*"},
         {
             "iamcco/markdown-preview.nvim",
             run = function()
@@ -112,15 +112,11 @@ require("lazy").setup(
         "kyazdani42/nvim-web-devicons",
         {
             "lukas-reineke/indent-blankline.nvim",
-            config = function()
-                require("plugin-config.indentline").setup()
-            end
         },
         "nvim-lualine/lualine.nvim",
-        {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"},
-    },
+        {"ellisonleao/gruvbox.nvim", dependencies = "rktjmp/lush.nvim"},
         {"mhinz/vim-startify"},
-        {"echasnovski/mini.map", branch = "stable"},
+        {"echasnovski/mini.map", branch = "stable",enabled = false},
         "simrat39/symbols-outline.nvim"
     }
 )

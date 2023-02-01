@@ -1,5 +1,8 @@
 let $VIMUSERRUNTIME = fnamemodify($MYVIMRC, ':p:h')
 
+set background=dark " or light if you want light mode
+colorscheme gruvbox
+
 source $VIMUSERRUNTIME/chunks/coc.vim
 
 let g:vista_default_executive = 'coc'
@@ -18,6 +21,8 @@ set statusline+=%{NearestMethodOrFunction()}
 autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 
 lua << EOF
+local colorscheme = "gruvbox"
+
 -- 基础配置
 require("basic")
 -- Packer插件管理
@@ -25,7 +30,7 @@ require("plugins")
 -- 快捷键映射
 require("keybindings")
 -- 主题设置
-require("colorscheme")
+-- require("colorscheme")
 
 -- 插件配置
 -- require('lvim.core.breadcrumbs')
@@ -39,10 +44,8 @@ require("plugin-config.autosave")
 require("plugin-config.comment")
 require("plugin-config.wildfire")
 require("plugin-config.impatient")
--- require("plugin-config.indentline")
 -- require("plugin-config.toggleterm")
-
-require('plugin-config.mini-map')
+-- require('plugin-config.mini-map')
 require('plugin-config.outline')
 EOF
 
