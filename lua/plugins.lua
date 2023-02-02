@@ -3,9 +3,9 @@ if not vim.loop.fs_stat(lazypath) then
     vim.fn.system(
         {
             "git",
-            "clone",
+           "clone",
             "--filter=blob:none",
-            "https://github.com/folke/lazy.nvim.git",
+           "https://github.com/folke/lazy.nvim.git",
             "--branch=stable", -- latest stable release
             lazypath
         }
@@ -20,19 +20,45 @@ require("lazy").setup(
         {"folke/neoconf.nvim", cmd = "Neoconf"},
         "folke/neodev.nvim",
         "windwp/nvim-autopairs",
-        "numToStr/Comment.nvim",
-        "kyazdani42/nvim-tree.lua",
+    {"numToStr/Comment.nvim",
+    config= function()
+        require('lvim.core.comment')
+      end},
+    {"kyazdani42/nvim-tree.lua",
+      config = function()
+        require('lvim.core.nvim-tree')
+      end
+    },
         "ahmedkhalf/project.nvim",
-        "lewis6991/impatient.nvim",
-        {"gcmt/wildfire.vim"},
+    {"lewis6991/impatient.nvim",
+      config = function()
+        require('lvim.core.impatient')
+      end
+
+    },
+        {"gcmt/wildfire.vim",
+      config = function()
+        require('lvim.core.wildfire')
+      end
+
+    },
         {"junegunn/goyo.vim"},
         {
             "phaazon/hop.nvim",
             branch = "v2", -- optional but strongly recommended
             config = function()
                 require "hop".setup {keys = "etovxqpdygfblzhckisuran"}
-            end
+            end,
+            enable = false
         },
+    {
+      "ggandor/leap.nvim",
+      config = function()
+        require('leap').add_default_mappings()
+      end,
+                  enable = false
+
+    },
         {
             "gaoDean/autolist.nvim",
             ft = {
@@ -53,16 +79,7 @@ require("lazy").setup(
                 autolist.create_mapping_hook("n", "<<", autolist.indent)
                 autolist.create_mapping_hook("n", "<C-r>", autolist.force_recalculate)
                 autolist.create_mapping_hook("n", "<leader>x", autolist.invert_entry, "")
-                vim.api.nvim_create_autocmd(
-                    "TextChanged",
-                    {
-                        pattern = "*",
-                        callback = function()
-                            vim.cmd.normal({autolist.force_recalculate(nil, nil), bang = false})
-                        end
-                    }
-                )
-            end
+             end
         },
         -- {
         --     "SmiteshP/nvim-navic",
@@ -87,14 +104,18 @@ require("lazy").setup(
             dependencies = "nvim-lua/plenary.nvim",
             lazy = true,
             config = function()
-              require('plugin-config/telescope')
+              require('lvim.core.telescope')
             end
         },
         -- enhance --
         {"tyru/open-browser.vim"},
         {"machakann/vim-sandwich"},
         {"tpope/vim-repeat"},
-        {"pocco81/auto-save.nvim"},
+        {"pocco81/auto-save.nvim",
+    config = function()
+        require('lvim.core.autosave')
+
+      end},
         -- {"akinsho/toggleterm.nvim", tag = "v1.*"},
         {
             "iamcco/markdown-preview.nvim",
@@ -107,17 +128,25 @@ require("lazy").setup(
         -- treesitter
         {
             "nvim-treesitter/nvim-treesitter",
-            run = ":TSUpdate"
+       config = function()
+        require('lvim.core.nvim-treesitter')
+      end
         },
         "kyazdani42/nvim-web-devicons",
         {
             "lukas-reineke/indent-blankline.nvim",
         },
-        "nvim-lualine/lualine.nvim",
+    {"nvim-lualine/lualine.nvim",
+    config = function()
+        require('lvim.core.lualine')
+      end},
         {"ellisonleao/gruvbox.nvim", dependencies = "rktjmp/lush.nvim"},
         {"mhinz/vim-startify"},
         {"echasnovski/mini.map", branch = "stable",enabled = false},
-        "simrat39/symbols-outline.nvim"
+    {"simrat39/symbols-outline.nvim",
+    config = function()
+        require('lvim.core.outline')
+      end}
     }
 )
 

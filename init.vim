@@ -29,24 +29,6 @@ require("basic")
 require("plugins")
 -- 快捷键映射
 require("keybindings")
--- 主题设置
--- require("colorscheme")
-
--- 插件配置
--- require('lvim.core.breadcrumbs')
--- require('lvim.core.bufferline')
--- require('lvim.core.autolist')
-require("plugin-config.nvim-tree")
-require("plugin-config.lualine")
-require("plugin-config.nvim-treesitter")
--- require("plugin-config.alpha")
-require("plugin-config.autosave")
-require("plugin-config.comment")
-require("plugin-config.wildfire")
-require("plugin-config.impatient")
--- require("plugin-config.toggleterm")
--- require('plugin-config.mini-map')
-require('plugin-config.outline')
 EOF
 
 "let g:python3_host_prog ='/usr/bin/python3'
