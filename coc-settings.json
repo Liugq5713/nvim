@@ -220,6 +220,7 @@
     "globby",
     "antdv",
     "antd",
-    "pinia"
+    "pinia",
+    "vnode"
   ]
 }

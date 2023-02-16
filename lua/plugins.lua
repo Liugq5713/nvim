@@ -6,6 +6,7 @@ if not vim.loop.fs_stat(lazypath) then
         lazypath
     })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -73,6 +74,7 @@ require("lazy").setup({
         lazy = true,
         config = function() require("lvim.core.telescope") end
     }, -- enhance --
+    {"ybian/smartim"},
     {"tyru/open-browser.vim"}, {"machakann/vim-sandwich"}, {"tpope/vim-repeat"},
     {
         "pocco81/auto-save.nvim",
