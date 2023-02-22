@@ -17,7 +17,9 @@ for frontend engineer
 
 - [LunarVim/LunarVim: 🌙 LunarVim is an IDE layer for Neovim. Completely free and community driven.](https://github.com/lunarvim/lunarvim)
 - [SpaceVim/SpaceVim: A community-driven modular vim/neovim distribution - The ultimate vimrc](https://github.com/SpaceVim/SpaceVim)
-
+- [NvChad/NvChad: An attempt to make neovim cli functional like an IDE while being very beautiful, blazing fast startuptime](https://github.com/NvChad/NvChad)
+- [LunarVim/Neovim-from-scratch: 📚 A Neovim config designed from scratch to be understandable](https://github.com/LunarVim/Neovim-from-scratch)
+ 
 ## 参考文章
 
 [My Neovim setup for React, TypeScript, Tailwind CSS, etc - DEV Community 👩‍💻👨‍💻](https://dev.to/craftzdog/my-neovim-setup-for-react-typescript-tailwind-css-etc-58fb)

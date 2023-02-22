@@ -83,3 +83,10 @@ vim.o.showmode = false
 vim.cmd("autocmd TermOpen * startinsert")
 -- backspace behaviour
 vim.o.backspace = [[indent,eol,start]]
+
+-- 开启 Folding 模块
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+-- 默认不要折叠
+-- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
+vim.o.foldlevel = 99
