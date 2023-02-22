@@ -81,10 +81,10 @@ require("lazy").setup({
         config = function() require("lvim.core.autosave") end
     }, {
         "akinsho/toggleterm.nvim",
+        enabled = false,
         config = function() require("toggleterm").setup() end
     }, {
         "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end
     }, {"liuchengxu/vista.vim"}, -- treesitter
     {
         "nvim-treesitter/nvim-treesitter",

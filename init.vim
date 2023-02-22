@@ -1,4 +1,5 @@
 let $VIMUSERRUNTIME = fnamemodify($MYVIMRC, ':p:h')
+let g:smartim_default = 'com.apple.keylayout.ABC'
 
 set background=dark " or light if you want light mode
 colorscheme gruvbox
