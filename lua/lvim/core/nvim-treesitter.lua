@@ -7,7 +7,7 @@ end
 treesitter.setup({
   -- 安装 language parser
   -- :TSInstallInfo 命令查看支持的语言
-  ensure_installed = {  "typescript","vue" },
+  ensure_installed = { "typescript","vue" },
   sync_install = false,
   auto_install = true,
 
