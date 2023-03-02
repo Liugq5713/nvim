@@ -221,6 +221,7 @@
     "antdv",
     "antd",
     "pinia",
-    "vnode"
+    "vnode",
+    "vite"
   ]
 }
