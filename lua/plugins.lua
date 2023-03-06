@@ -102,6 +102,17 @@ require("lazy").setup({
     }, {"tpope/vim-fugitive"}, {"sindrets/diffview.nvim", event = "BufRead"}, {
         'norcalli/nvim-colorizer.lua',
         config = function() require'colorizer'.setup() end
+    },
+    -- Lua
+    {
+       "folke/zen-mode.nvim",
+        config = function()
+          require("zen-mode").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+          }
+        end
     }
 })
 
