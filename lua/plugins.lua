@@ -88,7 +88,6 @@ require("lazy").setup({
     }, {"liuchengxu/vista.vim"}, -- treesitter
     {
         "nvim-treesitter/nvim-treesitter",
-        lazy = true,
         config = function() require("lvim.core.nvim-treesitter") end
     }, "kyazdani42/nvim-web-devicons", {"lukas-reineke/indent-blankline.nvim"},
     {
