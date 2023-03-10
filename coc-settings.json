@@ -222,6 +222,8 @@
     "antd",
     "pinia",
     "vnode",
-    "vite"
+    "vite",
+    "vuejs",
+    "hrbp"
   ]
 }
