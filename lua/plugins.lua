@@ -86,14 +86,27 @@ require("lazy").setup({
     }, {
         "iamcco/markdown-preview.nvim",
     }, {"liuchengxu/vista.vim"}, -- treesitter
+
+    -- appearance
+
     {
         "nvim-treesitter/nvim-treesitter",
         config = function() require("lvim.core.nvim-treesitter") end
-    }, "kyazdani42/nvim-web-devicons", {"lukas-reineke/indent-blankline.nvim"},
+    },
+    "kyazdani42/nvim-web-devicons", 
     {
         "nvim-lualine/lualine.nvim",
         config = function() require("lvim.core.lualine") end
-    }, {"ellisonleao/gruvbox.nvim", dependencies = "rktjmp/lush.nvim"},
+    }, 
+    {"ellisonleao/gruvbox.nvim", dependencies = "rktjmp/lush.nvim",
+      config = function() 
+        require("gruvbox").setup() 
+        vim.cmd([[colorscheme gruvbox]])
+        vim.o.background = "dark" -- or "light" for light mode
+      end
+    },
+    {"lukas-reineke/indent-blankline.nvim" },
+
     {"mhinz/vim-startify"},
     {"echasnovski/mini.map", branch = "stable", enabled = false}, {
         "simrat39/symbols-outline.nvim",

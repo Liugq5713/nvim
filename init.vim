@@ -1,9 +1,6 @@
 let $VIMUSERRUNTIME = fnamemodify($MYVIMRC, ':p:h')
 let g:smartim_default = 'com.apple.keylayout.ABC'
 
-set background=dark " or light if you want light mode
-colorscheme gruvbox
-
 source $VIMUSERRUNTIME/chunks/coc.vim
 
 let g:vista_default_executive = 'coc'
@@ -22,12 +19,12 @@ set statusline+=%{NearestMethodOrFunction()}
 autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 
 lua << EOF
-local colorscheme = "gruvbox"
 
 -- 基础配置
 require("basic")
 -- Packer插件管理
 require("plugins")
+
 -- 快捷键映射
 require("keybindings")
 EOF
@@ -36,4 +33,6 @@ EOF
 let g:python_host_skip_check=1
 let g:python3_host_skip_check=1
 let g:python3_host_prog ='/opt/homebrew/bin/python3'
+
+
 
