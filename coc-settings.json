@@ -224,6 +224,17 @@
     "vnode",
     "vite",
     "vuejs",
-    "hrbp"
+    "hrbp",
+    "composables",
+    "unref",
+    "preinstall",
+    "npmrc",
+    "vueuse",
+    "happypack",
+    "juejin",
+    "demi",
+    "Lynden",
+    "pnpx",
+    "changesets"
   ]
 }

@@ -98,6 +98,29 @@ require("lazy").setup({
         "nvim-lualine/lualine.nvim",
         config = function() require("lvim.core.lualine") end
     }, 
+    -- {
+    --   "rebelot/kanagawa.nvim", 
+    --   config = function()
+    --     require("kanagawa").setup({
+    --     theme= 'lotus'
+    --   })
+    --     -- vim.cmd([[colorscheme kanagawa]])
+    --     vim.cmd("colorscheme kanagawa-lotus")
+    --     vim.o.background = "dark" -- or "light" for light mode
+    --   end
+    -- },
+  -- {
+  --     "folke/tokyonight.nvim",
+  --     config = function()
+  --       require("tokyonight").setup({
+  --          style = "storm"
+  --       })
+  --       -- vim.cmd([[colorscheme kanagawa]])
+  --       vim.cmd("colorscheme tokyonight")
+  --       -- vim.o.background = "dark" -- or "light" for light mode
+  --     end
+  --   },
+
     {"ellisonleao/gruvbox.nvim", dependencies = "rktjmp/lush.nvim",
       config = function() 
         require("gruvbox").setup() 
