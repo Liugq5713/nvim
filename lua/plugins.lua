@@ -37,6 +37,7 @@ require("lazy").setup({
         enabled = false
     }, {
         "gaoDean/autolist.nvim",
+        enabled = false,
         ft = {"markdown", "text", "tex", "plaintex"},
         config = function()
             local autolist = require("autolist")
@@ -75,6 +76,7 @@ require("lazy").setup({
         config = function() require("lvim.core.telescope") end
     }, -- enhance --
     {"ybian/smartim"},
+  {'honza/vim-snippets'},
     {"tyru/open-browser.vim"}, {"machakann/vim-sandwich"}, {"tpope/vim-repeat"},
     {
         "pocco81/auto-save.nvim",

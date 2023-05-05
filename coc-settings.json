@@ -79,9 +79,7 @@
   "suggest.labelMaxLength": 60,
   "suggest.enablePreselect": false,
   "suggest.noselect": true,
-  "suggest.snippetIndicator": "",
   "suggest.timeout": 5000,
-  "suggest.triggerAfterInsertEnter": false,
   "suggest.triggerCompletionWait": 50,
   "cSpell.userWords": [
     "APIV",
@@ -235,6 +233,9 @@
     "demi",
     "Lynden",
     "pnpx",
+    "vitepress",
+    "vuepress",
+    "tmpl",
     "changesets"
   ]
 }
