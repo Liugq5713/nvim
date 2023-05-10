@@ -95,6 +95,9 @@ require("lazy").setup({
         "nvim-treesitter/nvim-treesitter",
         config = function() require("lvim.core.nvim-treesitter") end
     },
+    {'nvim-treesitter/nvim-treesitter-textobjects',
+        config = function() require("lvim.core.nvim-treesitter-textobjects") end
+    },
     "kyazdani42/nvim-web-devicons", 
     {
         "nvim-lualine/lualine.nvim",

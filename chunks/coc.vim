@@ -7,6 +7,7 @@ let g:coc_global_extensions = [
   \ '@yaegassy/coc-volar',
   \ 'coc-json',
   \ 'coc-css',
+  \ 'coc-tabnine',
   \ 'coc-tsserver',
   \ 'coc-lists',
   \ 'coc-vimlsp',
