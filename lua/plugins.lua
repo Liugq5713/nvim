@@ -18,6 +18,7 @@ require("lazy").setup({
         config = function() require("lvim.core.comment") end
     }, {
         "kyazdani42/nvim-tree.lua",
+        dependencies = "kyazdani42/nvim-web-devicons",
         config = function() require("lvim.core.nvim-tree") end
     }, "ahmedkhalf/project.nvim", {
         "lewis6991/impatient.nvim",
@@ -98,7 +99,7 @@ require("lazy").setup({
     {'nvim-treesitter/nvim-treesitter-textobjects',
         config = function() require("lvim.core.nvim-treesitter-textobjects") end
     },
-    "kyazdani42/nvim-web-devicons", 
+     
     {
         "nvim-lualine/lualine.nvim",
         config = function() require("lvim.core.lualine") end

@@ -236,6 +236,8 @@
     "vitepress",
     "vuepress",
     "tmpl",
+    "Weibo",
+    "Bilibili",
     "changesets"
   ]
 }
