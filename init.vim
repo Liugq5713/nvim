@@ -3,10 +3,6 @@ let $VIMUSERRUNTIME = fnamemodify($MYVIMRC, ':p:h')
 let g:smartim_default = 'com.apple.keylayout.ABC'
 
 source $VIMUSERRUNTIME/chunks/coc.vim
-
-let g:vista_default_executive = 'coc'
-let g:vista_fzf_preview = ['right:50%']
-
 lua << EOF
 
 -- 基础配置
