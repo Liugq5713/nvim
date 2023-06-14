@@ -16,10 +16,13 @@ map("n", "gx", "<Plug>(openbrowser-smart-search)", opt)
 -- 插件快捷键
 local pluginKeys = {}
 
-map("n", '<leader>fg', ":GFiles?<CR>", opt)
-map("n", '<leader>fh', ":History<CR>", opt)
+-- map("n", '<leader>fg', ":GFiles?<CR>", opt)
+-- map("n", '<leader>fh', ":History<CR>", opt)
 -- Telescope
+-- oldfiles
 vim.api.nvim_set_keymap('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>fh', "<cmd>lua require('telescope.builtin').oldfiles()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>fg', "<cmd>lua require('telescope.builtin').git_status()<CR>", { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>fl', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
 
