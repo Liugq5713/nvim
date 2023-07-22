@@ -20,11 +20,11 @@ local pluginKeys = {}
 -- map("n", '<leader>fh', ":History<CR>", opt)
 -- Telescope
 -- oldfiles
-vim.api.nvim_set_keymap('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fh', "<cmd>lua require('telescope.builtin').oldfiles()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fg', "<cmd>lua require('telescope.builtin').git_status()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fl', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>p', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>h', "<cmd>lua require('telescope.builtin').oldfiles()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>g', "<cmd>lua require('telescope.builtin').git_status()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>l', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>b', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
 
 -- vistal 
 -- vim.api.nvim_set_keymap("n", "T", ":Vista!!<CR>", {noremap = true, silent = true})
@@ -65,7 +65,7 @@ pluginKeys.telescopeList = {
 map("n", "<leader>rn", "<Plug>(coc-rename)", {})
 map("n", "<leader><leader>", ":CocAction<CR>", {})
 
-vim.api.nvim_set_keymap("n", "<leader>l", ":CocCommand eslint.executeAutofix<CR>", {})
+-- vim.api.nvim_set_keymap("n", "<leader>l", ":CocCommand eslint.executeAutofix<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>f", ":CocCommand prettier.formatFile<CR>", {noremap = true})
 
 map("n", "[g", "<Plug>(coc-diagnostic-prev)", {})

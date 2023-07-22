@@ -12,6 +12,9 @@ require("plugins")
 
 -- 快捷键映射
 require("keybindings")
+
+require('lvim.own.list').setup()
+
 EOF
 
 "let g:python3_host_prog ='/usr/bin/python3'
