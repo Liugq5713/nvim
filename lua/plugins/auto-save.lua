@@ -7,12 +7,12 @@ return {
         return ("◝(⑅•ᴗ•⑅)◜..°♡  autoSave: saved at" .. vim.fn.strftime("%H:%M:%S"))
       end,
       dim = 0.18, -- dim the color of `message`
-      cleaning_interval = 1000, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
+      cleaning_interval = 400, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
     },
-    events = { "InsertLeave", "TextChanged" },
+    events = { "InsertLeave" },
     write_all_buffers = false,
     on_off_commands = true,
     clean_command_line_interval = 0,
-    debounce_delay = 1 * 500,
+    debounce_delay = 5 * 1000,
   },
 }
