@@ -6,3 +6,4 @@ vim.opt.spelllang = { "en", "cjk" }
 vim.opt.spell = false
 vim.o.spell = false
 vim.opt.wrap = true
+vim.g.autowriteall = true
