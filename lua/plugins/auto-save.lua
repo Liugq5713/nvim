@@ -3,15 +3,13 @@ return {
   opts = {
     enabled = true, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
     execution_message = {
-      message = function() -- message to print on save
-        return ""
-      end,
+      message = "",
       dim = 0.18, -- dim the color of `message`
       cleaning_interval = 250, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
     },
     trigger_events = { -- See :h events
       immediate_save = { "BufLeave", "FocusLost" }, -- vim events that trigger an immediate save
-      defer_save = { "InsertLeave", "TextChanged" }, -- vim events that trigger a deferred save (saves after `debounce_delay`)
+      defer_save = { "InsertLeave" }, -- vim events that trigger a deferred save (saves after `debounce_delay`)
       cancel_defered_save = { "InsertEnter" }, -- vim events that cancel a pending deferred save
     },
     -- function that determines whether to save the current buffer or not
@@ -27,7 +25,7 @@ return {
       return false -- can't save
     end,
     write_all_buffers = false, -- write all buffers when the current one meets `condition`
-    debounce_delay = 2000,
+    debounce_delay = 100,
     callbacks = { -- functions to be executed at different intervals
       enabling = nil, -- ran when enabling auto-save
       disabling = nil, -- ran when disabling auto-save
