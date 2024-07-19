@@ -9,11 +9,15 @@ return {
         hide_gitignored = true,
         hide_by_name = {
           -- '.git',
-          '.DS_Store',
+          ".DS_Store",
           -- 'thumbs.db',
         },
         never_show = {},
       },
+    },
+    source_selector = {
+      winbar = true,
+      statusline = true,
     },
     window = {
       position = "right",
