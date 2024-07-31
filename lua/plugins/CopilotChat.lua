@@ -5,7 +5,7 @@ return {
     user = user:sub(1, 1):upper() .. user:sub(2)
     return {
       model = "gpt-4",
-      allow_insecure = true,
+      allow_insecure = false,
       auto_insert_mode = true,
       show_help = true,
       question_header = "  " .. user .. " ",
