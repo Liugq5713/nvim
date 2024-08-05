@@ -16,8 +16,8 @@ return {
       },
     },
     source_selector = {
-      winbar = true,
-      statusline = true,
+      winbar = false,
+      statusline = false,
     },
     window = {
       position = "right",
