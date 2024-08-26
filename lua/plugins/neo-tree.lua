@@ -26,6 +26,7 @@ return {
         o = "open_with_window_picker",
         S = "split_with_window_picker",
         s = "vsplit_with_window_picker",
+        H = "",
       },
     },
   },

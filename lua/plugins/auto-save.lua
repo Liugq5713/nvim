@@ -1,16 +1,16 @@
 return {
   "okuuva/auto-save.nvim",
   opts = {
-    enabled = false, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
+    enabled = true, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
     execution_message = {
       message = "",
       dim = 0.18, -- dim the color of `message`
       cleaning_interval = 250, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
     },
     trigger_events = { -- See :h events
-      -- immediate_save = { "BufLeave", "FocusLost" }, -- vim events that trigger an immediate save
-      -- defer_save = { "BufLeave" }, -- vim events that trigger a deferred save (saves after `debounce_delay`)
-      -- cancel_defered_save = { "InsertEnter" }, -- vim events that cancel a pending deferred save
+      immediate_save = { "BufLeave", "FocusLost" }, -- vim events that trigger an immediate save
+      defer_save = { "BufLeave" }, -- vim events that trigger a deferred save (saves after `debounce_delay`)
+      cancel_defered_save = { "InsertEnter" }, -- vim events that cancel a pending deferred save
     },
     -- function that determines whether to save the current buffer or not
     -- return true: if buffer is ok to be saved
