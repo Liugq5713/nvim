@@ -21,7 +21,6 @@ return {
     },
     window = {
       position = "right",
-      auto_expand_width = true,
       mappings = {
         o = "open_with_window_picker",
         S = "split_with_window_picker",
