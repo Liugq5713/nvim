@@ -3,9 +3,9 @@ return {
   opts = {
     enabled = true, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
     trigger_events = { -- See :h events
-      immediate_save = { "ExitPre", "QuitPre", "VimSuspend" }, -- vim events that trigger an immediate save
-      defer_save = { "CursorHold", "BufLeave", "FocusLost" }, -- vim events that trigger a deferred save (saves after `debounce_delay`)
-      cancel_deferred_save = { "InsertEnter" }, -- vim events that cancel a pending deferred save
+      immediate_save = {"BufLeave", "FocusLost" ,"ExitPre", "QuitPre", "VimSuspend" }, -- vim events that trigger an immediate save
+      -- defer_save = { "BufLeave", "FocusLost" }, -- vim events that trigger a deferred save (saves after `debounce_delay`)
+      -- cancel_deferred_save = { "InsertEnter" }, -- vim events that cancel a pending deferred save
     },
     condition = nil,
     write_all_buffers = false, -- write all buffers when the current one meets `condition`
