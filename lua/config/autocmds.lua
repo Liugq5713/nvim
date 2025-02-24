@@ -5,7 +5,7 @@
 --
 vim.api.nvim_create_autocmd({ "FileType" }, {
   callback = function()
-    vim.b.autoformat = true
+    vim.b.autoformat = false
   end,
 })
 

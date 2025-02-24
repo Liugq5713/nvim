@@ -10,9 +10,34 @@ return {
         hide_by_name = {
           -- '.git',
           ".DS_Store",
-          -- 'thumbs.db',
+          "thumbs.db",
         },
         never_show = {},
+      },
+    },
+    renderers = {
+      file = {
+        { "indent" },
+        { "icon" },
+        {
+          "container",
+          content = {
+            {
+              "name",
+              zindex = 10,
+            },
+            {
+              "symlink_target",
+              zindex = 10,
+              highlight = "NeoTreeSymbolicLinkTarget",
+            },
+            { "clipboard", zindex = 10 },
+            { "bufnr", zindex = 10 },
+            { "modified", zindex = 20, align = "right" },
+            { "diagnostics", zindex = 20, align = "right" },
+            { "git_status", zindex = 10, align = "right" },
+          },
+        },
       },
     },
     source_selector = {
@@ -21,6 +46,7 @@ return {
     },
     window = {
       position = "right",
+      auto_expand_width = true,
       mappings = {
         o = "open_with_window_picker",
         S = "split_with_window_picker",
