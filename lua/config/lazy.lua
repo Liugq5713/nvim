@@ -17,6 +17,20 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
   },
+  ui = {
+    -- 键位映射
+    keys = {
+      -- 使用 C-j 执行与 Down 键相同的功能
+      ["<C-j>"] = function(plugin)
+        require("lazy.view").keys["<Down>"](plugin)
+      end,
+      
+      -- 使用 C-k 执行与 Up 键相同的功能
+      ["<C-k>"] = function(plugin)
+        require("lazy.view").keys["<Up>"](plugin)
+      end,
+    },
+  },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
     -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
