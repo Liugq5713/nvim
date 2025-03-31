@@ -10,6 +10,5 @@ vim.keymap.del("n", "<S-l>")
 vim.api.nvim_set_keymap('i', '<C-j>', 'pumvisible() ? "\\<Down>" : "\\<C-j>"', { noremap = true, expr = true })
 vim.api.nvim_set_keymap('i', '<C-k>', 'pumvisible() ? "\\<Up>" : "\\<C-k>"', { noremap = true, expr = true })
 
-
-
+vim.api.nvim_set_keymap('i', '/', '/', { noremap = true, silent = true })
 
