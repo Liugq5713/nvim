@@ -17,5 +17,14 @@ return {
       ["<C-k>"] = { "select_prev", "fallback" },
       ["<C-j>"] = { "select_next", "fallback" },
     },
+    sources = {
+      providers = {
+        path = {
+          enabled = function()
+            return vim.bo.filetype ~= "copilot-chat"
+          end,
+        },
+      },
+    },
   },
 }
