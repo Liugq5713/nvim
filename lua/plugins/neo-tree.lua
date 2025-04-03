@@ -45,7 +45,7 @@ return {
       statusline = false,
     },
     window = {
-      position = "right",
+      -- position = "right",
       auto_expand_width = false,
       mappings = {
         o = "open_with_window_picker",
