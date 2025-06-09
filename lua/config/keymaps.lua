@@ -12,3 +12,7 @@ vim.api.nvim_set_keymap('i', '<C-k>', 'pumvisible() ? "\\<Up>" : "\\<C-k>"', { n
 
 vim.api.nvim_set_keymap('i', '/', '/', { noremap = true, silent = true })
 
+vim.keymap.set("n", "<leader>ox", function()
+    local r, c = unpack(vim.api.nvim_win_get_cursor(0))
+    vim.cmd('!code . && code -g ' .. vim.fn.expand('%') .. ':' .. r .. ':' .. c)
+  end, { desc = '[O]pen E[x]ternal editor' })
